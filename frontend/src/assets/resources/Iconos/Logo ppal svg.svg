@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30"
+   height="30"
+   viewBox="0 0 29.999999 29.999998"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <circle
+       style="fill:#ff6f01;fill-opacity:1;stroke-width:1.12252;stroke-dasharray:none"
+       id="path1"
+       cx="15.034822"
+       cy="15.095692"
+       r="14.973953" />
+    <g
+       id="g8"
+       transform="translate(-0.53033006,0.79549509)">
+      <g
+         id="g5"
+         transform="matrix(0.97461519,0,0,0.97461519,1.1843142,0.34058507)">
+        <g
+           id="g4"
+           transform="matrix(0.48565703,0,0,0.49660931,-18.189801,10.85007)">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.953944"
+             id="rect2"
+             width="6.3304515"
+             height="33.678288"
+             x="-10.140031"
+             y="-84.722778"
+             transform="rotate(90)" />
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:1.11735"
+             id="rect3"
+             width="7.0595832"
+             height="41.43182"
+             x="-49.037716"
+             y="-75.346527"
+             transform="matrix(-0.70908182,0.70512621,-0.66173737,-0.74973572,0,0)" />
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.774292"
+             id="rect4"
+             width="6.3304515"
+             height="22.187817"
+             x="76.074135"
+             y="-10.104376" />
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke-width:0.821469"
+             id="rect7"
+             width="6.4732122"
+             height="24.423159"
+             x="-57.517704"
+             y="-14.238728"
+             transform="scale(-1)" />
+        </g>
+        <rect
+           style="fill:#ff6f01;fill-opacity:1;stroke-width:0.739786"
+           id="rect5"
+           width="10.054619"
+           height="4.6901374"
+           x="15.073846"
+           y="-11.973656"
+           transform="matrix(0.68904152,0.72472187,-0.7156684,0.69844022,0,0)" />
+      </g>
+      <ellipse
+         style="fill:#ff6f01;fill-opacity:1;stroke-width:1.68958"
+         id="path7"
+         cx="23.395622"
+         cy="6.4044099"
+         rx="2.0472367"
+         ry="1.9829949" />
+    </g>
+  </g>
+</svg>
