@@ -114,3 +114,19 @@ Con todo esto, lo que quiero conseguir es definir una red social dónde el conte
 
 El concepto de "Wipe" es una idea sacada directamente de los videojuegos online, dónde el hecho de resetearlo todo y tener que volver a empezar ofrece de nuevo la oportunidad a todo el mundo de alcanzar los objetivos mayores, ya que en un "servidor" dónde jugadores expertos amasan objetos, poder o dinero desbalancea la experiencia de tal forma que a veces estás a merced de estos jugadores experimentados. Esto mismo pasa en las RRSS, usuarios con millones de seguidores son capaces de alterar la opinión pública sin saber que intereses pueden haber detrás, como fines políticos o publicitarios... 
 Esto también conlleva un beneficio funcional; las bases de datos se resetearían y vaciarían cada 24 horas, no estamos hablando de contenido persistente en el tiempo, más bien muy volatil (salvo unos pocos); esto, creemos que ayudaría a los algoritmos de búsqueda ser más eficientes y rápidos, a no consumir memoria y si llegara el caso, menos costes en su puesta en marcha.
+
+# Como arrancar 
+==Terminal en directiorio api para arrancar servidor backend:==
+
+```terminal
+php artisan serve
+
+```
+
+==Terminal en directiorio frontend para arrancar front:==
+
+```terminal
+npm run dev
+
+```
+
