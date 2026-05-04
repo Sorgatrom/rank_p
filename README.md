@@ -70,7 +70,7 @@ Seguidamente podemos ver las categorías que irán acompañadas de un icono (cre
 e filtrarán los post según temática, está pensada para ser arrastrada con los dedos de forma lateral en móvil, 
 y con ruleta de ratón en web.
 
-![imagen](src/assets/resources/Iconos/Iconos%20categorias.svg)
+![imagen](frontend/src/assets/resources/Iconos/Iconos%20categorias.svg)
 
 *Veremos como en la fila superior encontramos iconos a todo color, serán los que describirán cada categoría; los iconos bronze, plata y oro pertenecerán a las "recompensas" para cada usuario, se detallará en el siguiente apartado*
 
@@ -78,22 +78,22 @@ En este primer pantallazo, podemos ver la fase incial dentro de un "wipe" (reset
 
 Mas abajo, el botón de postear (dummie, no definitivo).
 
-![imagen](src/assets/resources/Capturas/Captura%20pantalla%20inicio%20wipe.PNG)
+![imagen](frontend/src/assets/resources/Capturas/Captura%20pantalla%20inicio%20wipe.PNG)
 
 ## Fase Final (Consumo de contenido)
 En general el diseño de página no cambia, sólo el contenido del cuerpo principal.
 
 En esta fase, se revelarán los nombres y la posición de cada post según cantidad de likes, también se asignarán las recompensas a cada usuario finalista en los puestos 1, 2 y 3 por cada categoría, y eso aparecerá en su perfil con los iconos antes adjuntos (bronze, plata y oro) que son mucho más específicos para cada categoría. Para su visibilidad en la pantalla principal/ranking se ha optado por generar "medallas" mas simples junto a su nombre que aunan la cantidad de primeros puestos indistintamente de la categoría conseguida. La última "cocacola" es para otorgársela a la publicidad, que se podrá jugar con su diseño ya que en el ejemplo es cocacola.
 
-![imagen](src/assets/resources/Iconos/Iconos%20Ranks.svg)
+![imagen](frontend/src/assets/resources/Iconos/Iconos%20Ranks.svg)
 
 Ahora los nombres serán visibles junto a la cantidad de medallas, y cantidad de "likes", se ha optado también por añadir iconos de primeros puestos para los 1, 2 y 3.
 
-![imagen](src/assets/resources/Iconos/Iconos%20Ranks%20Puestos.svg)
+![imagen](frontend/src/assets/resources/Iconos/Iconos%20Ranks%20Puestos.svg)
 
-Podremos ver finalmente la unión de todos los elementos descritos anteriormente, ahora en pantalla web, los primeros puestos aparecen en su parte izquierda con las medallas de posición en el ranking ( ![imagen](src/assets/resources/Iconos/Iconos%20Ranks%20Puestos.svg) ) junto al nombre de usuario, y a la derecha de este, la cantidad de primeros, segundos y terceros puestos que ha conseguido en toda su "carrera" en esta red social (![imagen](src/assets/resources/Iconos/Iconos%20Ranks.svg)). En cuarto puesto está entremetida la publicidad, que además se situa en el centro de la pantalla, junto a su icono en PixelArt (bastente divertido a mi juicio). Y al final de cada entrada o post, el recuento, ahora sí de likes que ha recibido.
+Podremos ver finalmente la unión de todos los elementos descritos anteriormente, ahora en pantalla web, los primeros puestos aparecen en su parte izquierda con las medallas de posición en el ranking ( ![imagen](frontend/src/assets/resources/Iconos/Iconos%20Ranks%20Puestos.svg) ) junto al nombre de usuario, y a la derecha de este, la cantidad de primeros, segundos y terceros puestos que ha conseguido en toda su "carrera" en esta red social (![imagen](frontend/src/assets/resources/Iconos/Iconos%20Ranks.svg)). En cuarto puesto está entremetida la publicidad, que además se situa en el centro de la pantalla, junto a su icono en PixelArt (bastente divertido a mi juicio). Y al final de cada entrada o post, el recuento, ahora sí de likes que ha recibido.
 
-![imagen](src/assets/resources/Capturas/Captura%20pantalla%20final%20wipe.PNG)
+![imagen](frontend/src/assets/resources/Capturas/Captura%20pantalla%20final%20wipe.PNG)
 
 Ya no aparecerá el botón de "postear" puesto que ya no será posible hacerlo hasta el día siguiente, una vez que se resetee todo y vuelta a empezar. Tan solo se guardarán en BBDD el historial del primeros, segundos y terceros en cada categoría y se contruirá un time-line que cada año podría publicarse; quizás se diseñe una medalla para el que haya conseguido más interacciones ese año (aún por explorar).
 
