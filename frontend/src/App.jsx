@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
-      <PreWipeCard number={1} content="Hola! soy el primer post" ></PreWipeCard>
-      <PreWipeCard number={2} content="Hola! soy el primer post" ></PreWipeCard>
+      <PreWipeCard number={1} content="Compilando el servidor..." />
+      <PreWipeCard number={2} content="Debuggeando el componente..." />
+      <PreWipeCard number={3} content="Push a la rama main" />
+      <PreWipeCard number={5} content="Error 404: Café no encontrado" />
     </>
   )
 }
