@@ -1,0 +1,15 @@
+.header-main{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.header-main-logo{
+    height: 60px;
+    width: 60px;
+    background-image: url('../resources/Iconos/logo ppal svg.svg');
+}
