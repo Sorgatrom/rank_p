@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <HeaderMain user="manolito" tokens={1} />
-      <PreWipeCard number={1} content="Compilando el servidor..." />
-      <PreWipeCard number={2} content="Debuggeando el componente..." />
-      <PreWipeCard number={3} content="Push a la rama main" />
-      <PreWipeCard number={5} content="Error 404: Café no encontrado" />
+      <PreWipeCard content="Compilando el servidor..." />
+      <PreWipeCard content="Debuggeando el componente..." />
+      <PreWipeCard content="Push a la rama main" />
+      <PreWipeCard content="Error 404: Café no encontrado" />
     </>
   )
 }

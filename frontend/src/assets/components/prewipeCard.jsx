@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './prewipeCard.css'
 import { generateFakeName } from "../utils/generador_nombres"
 
-function PreWipeCard({number, content}) {
+function PreWipeCard({content}) {
 
     
     const [like, setlike] = useState(false);
@@ -18,9 +18,6 @@ function PreWipeCard({number, content}) {
     return (
         <>
             <div className="prewipe-card">
-                <div className="prewipe-card-number">
-                    <p>{number}</p>
-                </div>
                 <div className="prewipe-card-fakenameandcontent">
                     <h2>{name}</h2>
                     <p>{content}</p>

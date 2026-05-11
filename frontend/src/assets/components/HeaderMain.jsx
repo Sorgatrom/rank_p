@@ -7,20 +7,19 @@ function HeaderMain({user, tokens}) {
             <div className="header-main">
                 <div className="header-main-logo" src="-/resources/Iconos/logo ppal svg.svg"/>
                 <div className="header-main-search">
-                    <img className="header-main-buscar" src="../resources/iconos/Iconos categorias.svg" />
                     <form>
                         <input type="text" placeholder="Buscar..." />
                     </form>
                 </div>
                 <div className="header-main-info">
-                    <p></p>
-                    <img></img>
+                    <p>23:00:12</p>
+                    <div className="header-main-info-div1"></div>
                     <p>{tokens}/1</p>
-                    <img></img>
+                    <div className="header-main-info-div2"></div>
+                    <div className="header-main-user">
+                    </div>
                 </div>
-                <div>
-                    <img></img>
-                </div>
+
             </div>
 
         </>
