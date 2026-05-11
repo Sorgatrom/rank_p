@@ -23,7 +23,6 @@
 
 }
 
-
 .prewipe-card-fakenameandcontent{
     display: flex;
     flex-direction: column;
@@ -63,9 +62,34 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    transition: 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+}
+
+.prewipe-card-liked > button{
+    margin: 0px;
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+    margin-left: 15px;
+    background-image: url('../resources/iconos/Iconos categorias.svg');
+    background-position: -330px -3px;
+
+    /*para que en accesibilidad el texto del botón no se muestre, pero que siga siendo accesible para lectores de pantalla*/
+    text-indent: -9999px; /* Mueve el texto fuera de la pantalla */
+    overflow: hidden;    /* Asegura que nada se salga del borde del botón */
+    white-space: nowrap; /* Evita que el texto haga saltos de línea */
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
 }
 
 .prewipe-card-like > button:hover{
-    scale: 1.2;
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.prewipe-card-liked > button:hover{
+    transform: scale(1.2) rotate(-5deg);
+
 }
