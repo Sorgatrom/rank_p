@@ -86,10 +86,10 @@
 }
 
 .prewipe-card-like > button:hover{
-    transform: scale(1.2) rotate(-5deg);
+    transform: scale(1.1);
 }
 
 .prewipe-card-liked > button:hover{
-    transform: scale(1.2) rotate(-5deg);
+    transform: scale(1.1);
 
 }
