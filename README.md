@@ -99,13 +99,13 @@ Ya no aparecerá el botón de "postear" puesto que ya no será posible hacerlo h
 
 # Tecnologías
 ## Servidor
-Para el *Back* se usará **PHP**, ya que es un lenguaje con el que nos estamos familiarizando en clase y creo que muy robusto, con muchos años de recorrido y en internet seguro que encontramos mucha información y ayuda, además con **Express** se está poniendo al día junto a otros lenguajes como puede ser JavaScript con Node del lado del servidor.
+Para el *Back* se usará **PHP**, ya que es un lenguaje con el que nos estamos familiarizando en clase y creo que muy robusto, con muchos años de recorrido y en internet seguro que encontramos mucha información y ayuda, además con **Laravel** & **Express** se están poniendo al día junto a otros lenguajes como puede ser JavaScript con Node del lado del servidor.
 
 ## Front
 Para el *Front* usaremos **Html, css y JavaScript** incluso valoraremos el hecho de introducir **React** en su diseño, ya que ofrece flexibilidad y reutilización de componentes, este proyecto parece que tendremos que reutilizar muchos componentes.
 
 ## Base de datos
-Para la base datos, cómo no, usaremos **SQL** por su integración con php y por propios conocimientos.
+Para la base datos, cómo no, usaremos **postgresSQL** por su integración con php/Laravel.
 
 # Conclusión
 Se ha definido de manera muy clara cómo se dispondrán las herramientas que permitan a los usuarios de esta red interactuar entre ellos, en un sólo tablón por **tema** y con un reseteo diario para iniciar una nueva oportunidad por cada día (Wipe). Se han dispuesto los algoritmos y su visibilidad para evitar que el contenido, por pertenecer a una voz famosa fuera de la red, o dentro de ella altere la opinión pública o fomente la votación ("Like"). Se define el mecanismo por el cual cada usuario se vería recompensado (chapas o rewards) y tendría interés crear un historial de cada **Wipe** creándose un histórico de opiniones.
@@ -115,15 +115,20 @@ Con todo esto, lo que quiero conseguir es definir una red social dónde el conte
 El concepto de "Wipe" es una idea sacada directamente de los videojuegos online, dónde el hecho de resetearlo todo y tener que volver a empezar ofrece de nuevo la oportunidad a todo el mundo de alcanzar los objetivos mayores, ya que en un "servidor" dónde jugadores expertos amasan objetos, poder o dinero desbalancea la experiencia de tal forma que a veces estás a merced de estos jugadores experimentados. Esto mismo pasa en las RRSS, usuarios con millones de seguidores son capaces de alterar la opinión pública sin saber que intereses pueden haber detrás, como fines políticos o publicitarios... 
 Esto también conlleva un beneficio funcional; las bases de datos se resetearían y vaciarían cada 24 horas, no estamos hablando de contenido persistente en el tiempo, más bien muy volatil (salvo unos pocos); esto, creemos que ayudaría a los algoritmos de búsqueda ser más eficientes y rápidos, a no consumir memoria y si llegara el caso, menos costes en su puesta en marcha.
 
+# Librerias
+- Laravel (vite)
+- React
+- React Router dom
+
 # Como arrancar 
-==Terminal en directiorio api para arrancar servidor backend:==
+=Terminal en directiorio api para arrancar servidor backend:=
 
 ```terminal
 php artisan serve
 
 ```
 
-==Terminal en directiorio frontend para arrancar front:==
+=Terminal en directiorio frontend para arrancar front:=
 
 ```terminal
 npm run dev
