@@ -1,5 +1,8 @@
 import './headerMain.css';
-import { timerFlag, timerFlagSwitcher } from "../utils/timerFlag.jsx"
+import { useState, useEffect } from 'react';
+import { TimerFlag } from "../utils/TimerFlag.jsx"
+
+
 
 function HeaderMain({user, tokens}) {
 
@@ -13,7 +16,7 @@ function HeaderMain({user, tokens}) {
                     </form>
                 </div>
                 <div className="header-main-info">
-                    {timerFlag({mensaje1: "Contribuye", mensaje2: "Cribado", mensaje3: "Resultados"})}
+                    <TimerFlag mensaje1="Contribuye" mensaje2="Cribado" mensaje3="Resultados"/>
                     <p>{tokens}/1</p>
                     <div className="header-main-info-div2"></div>
                     <div className="header-main-user">

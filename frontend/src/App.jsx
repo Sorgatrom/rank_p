@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import PreWipeCard from './assets/components/PrewipeCard'
 import HeaderMain from './assets/components/HeaderMain'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <HeaderMain user="manolito" tokens={1} />
