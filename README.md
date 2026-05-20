@@ -117,14 +117,16 @@ Esto también conlleva un beneficio funcional; las bases de datos se resetearía
 
 # Librerias
 - Laravel (vite)
+- laravel Sanctum (php artisan install:api)
 - React
 - React Router dom
+-
 
 # Como arrancar 
 =Terminal en directiorio api para arrancar servidor backend:=
 
 ```terminal
-php artisan serve
+php artisan serve //Para servir por rutas nuestros JSON
 
 ```
 
