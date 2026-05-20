@@ -1,0 +1,72 @@
+.prewipe-card-publi-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.prewipe-card-publi-main:hover{
+    background-color: #ffff;
+}
+
+.prewipe-card-publi-contenido{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: transparent;
+    text-align: left;
+    text-justify: left;
+    margin-left: 2vw;
+}
+
+.prewipe-card-publi-contenido > p{
+    margin: 0px;
+}
+
+.prewipe-card-publi-contenido-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.prewipe-card-publi-contenido-name > h2{
+    font-size: 17px;
+    margin: 0;
+    align-items: center;
+}
+
+.prewipe-card-publi-contenido-name-adv{
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.prewipe-card-publi-cocacola{
+    height: 15px;
+    width: 45px;
+    margin: 0;
+    background-image: url('../resources/iconos/Iconos Ranks.svg');
+    background-position: -45px 0px;
+    margin-left: 5px;
+}
+
+.prewipe-card-publi-icon{
+    height: 30px;
+    width: 30px;
+    background-image: url('../resources/iconos/Iconos categorias.svg');
+    background-position: -333px -30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+}
+
