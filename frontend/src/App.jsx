@@ -1,10 +1,12 @@
 import PreWipeCard from './assets/components/PrewipeCard'
 import HeaderMain from './assets/components/HeaderMain'
+import CatBar from './assets/components/CatBar'
 
 function App() {
   return (
     <>
       <HeaderMain user="manolito" tokens={1} />
+      <CatBar/>
       <PreWipeCard content="Compilando el servidor..." />
       <PreWipeCard content="Debuggeando el componente..." />
       <PreWipeCard content="Push a la rama main" />

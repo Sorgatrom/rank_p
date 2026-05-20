@@ -1,0 +1,132 @@
+.categoria-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 25px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.categoria-button-Entretenimiento{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+}
+
+.categoria-button-Política{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -30px 0px;
+}
+
+.categoria-button-Deportes{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -60px 0px;
+}
+
+.categoria-button-Tecnología{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -90px 1px;
+}
+
+.categoria-button-Arte{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -120px 1px;
+}
+
+.categoria-button-Viajes{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -150px 0px;
+}
+
+.categoria-button-Moda{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -180px 0px;
+}
+
+.categoria-button-Ciencia{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -210px 0px;
+}
+
+.categoria-button-Música{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -240px 1px;
+}
+
+.categoria-button-Economía{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -270px 1px;
+}
+
+.categoria-button-Salud{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -360px 1px;
+}
+
+.categoria-button-Gastronomía{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -390px -1px;
+}
+
+.categoria-button-Videojuegos{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: -420px 0px;
+}
+
+.categoria-button-Cine{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+    background-position: 30px 0px
+}
+
+.categoria-button:hover{
+    cursor: pointer;
+    background-color: #f3f3f3;
+    transform: translateY(-2px); /* Mueve el botón 3 píxeles hacia arriba */
+    box-shadow: 0 3px 3px rgba(129, 129, 129, 0.3); /* Añade una sombra debajo */
+    
+}
