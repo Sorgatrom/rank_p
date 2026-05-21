@@ -1,9 +1,27 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import PreWipeCard from '../assets/components/PrewipeCard'
 import PreWipeCardPubli from '../assets/components/PrewipeCardPubli'
 import HeaderMain from '../assets/components/HeaderMain'
 import CatBar from '../assets/components/CatBar'
 
 function Dashboard() {
+  const navigate = useNavigate();
+
+  // Dentro de tu componente Dashboard
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login'); // Si no hay token, patada al login
+    }
+  }, [navigate]);
+
+  const cerrarSesion = () => {
+    localStorage.removeItem('token'); // Borramos la llave
+    navigate('/login');              // Volvemos al login
+  };
+
   return (
     <>
       <HeaderMain user="manolito" tokens={1} />

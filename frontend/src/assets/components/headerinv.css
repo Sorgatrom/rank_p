@@ -1,4 +1,4 @@
-.header-main{
+.headerinv-main{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -6,9 +6,10 @@
     background-color: #fff;
     padding: 10px;
     border-radius: 30px;
+    height: 50px;
 }
 
-.header-main-logo{
+.headerinv-main-logo{
     height: 40px;
     width: 40px;
     margin:0px;
@@ -18,9 +19,9 @@
     min-width: 40px;
 }
 
-.header-main-info{
+.headerinv-main-info{
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     align-items:center;
     background-color: #f0f0f0;
     border-radius: 20px;
@@ -28,29 +29,47 @@
     margin-left: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    height: 40px;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
     cursor:pointer;
     transition: all 0.3s ease;
-    filter: grayscale(100%);
+    top: 0px;
 }
 
-.header-main-info:hover{
-    background-color: #f3f3f3;
-    transform: translateY(-2px); /* Mueve el botón 3 píxeles hacia arriba */
-    box-shadow: 0 3px 3px rgba(129, 129, 129, 0.3); /* Añade una sombra debajo */
-    filter: grayscale(0%);
+.headerinv-main-info-red{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin:0px;   
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    top: 0px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
 }
 
-.header-main-info > p{
-    margin:0px;  
-    font-weight: bolder;
-    font-size: 14px;
-    color: #333;
-  
+.headerinv-main-letrero{
+    display: none;
 }
 
+.headerinv-main-letrero-red{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+    color: red;
+}
 
-.header-main-info > form {
+.headerinv-main-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -60,7 +79,8 @@
     color: #333;
 }
 
-.header-main-input1{
+.headerinv-main-input1{
+    margin:0px;
     width: 130px;
     margin-right: 10px;
     border-style: none;
@@ -69,7 +89,8 @@
     border-bottom: 1px solid ; 
 }
 
-.header-main-input2{
+.headerinv-main-input2{
+    margin:0px;
     width: 80px;
     margin-right: 10px;
     border-style: none;
@@ -79,7 +100,7 @@
 }
 
 @media (max-width: 768px){
-    .header-main-input1{
+    .headerinv-main-input1{
     font-size: 15px;
     width: 80px;
     margin-right: 10px;
@@ -92,7 +113,7 @@
     text-overflow: ellipsis; /* Añade los puntos suspensivos (...) */
     }
 
-    .header-main-input2{
+    .headerinv-main-input2{
     font-size: 15px;
     width: 50px;
     margin-right: 10px;
@@ -108,18 +129,18 @@
 
 }
 
-.header-main-input1:focus{
+.headerinv-main-input1:focus{
     outline: none;
 
 }
 
-.header-main-input2:focus{
+.headerinv-main-input2:focus{
 
     outline: none;
 
 }
 
-.header-main-button{
+.headerinv-main-button{
     width: fit-content;
     height: 30px;
     border-radius: 51px;
