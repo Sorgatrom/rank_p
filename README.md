@@ -122,6 +122,27 @@ Esto también conlleva un beneficio funcional; las bases de datos se resetearía
 - React Router dom
 -
 
+# Arquitectura
+```
+src/
+├── components/         <-- Piezas reutilizables
+│   ├── Navbar.jsx      (El menú superior)
+│   ├── EntradaCard.jsx (El diseño individual de un post/entrada)
+│   └── FormInput.jsx   (Un campo de texto personalizado)
+│
+├── pages/              <-- Tus pantallas (lo que pones en App.jsx)
+│   ├── Login.jsx       (Pantalla de acceso)
+│   ├── Dashboard.jsx   (La página principal donde listar entradas)
+│   ├── Dashboard2.jsx  (La página principal donde filtrar entradas)
+│   ├── Dashboard2.jsx  (La página principal donde filtrar entradas)
+│   ├── Dashboard3.jsx  (La página principal donde rankear!!)
+│   └── HallOfHonor.jsx (La pantalla del salón de la fama)
+│
+├── App.jsx             <-- El jefe de tráfico: solo importa Rutas y Pages
+└── main.jsx            <-- El archivo que arranca React
+
+```
+
 # Como arrancar 
 =Terminal en directiorio api para arrancar servidor backend:=
 

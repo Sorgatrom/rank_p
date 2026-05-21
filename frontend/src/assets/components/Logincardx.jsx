@@ -6,7 +6,7 @@ function Logincardx({}) {
         <>
             <div className="prewipe-card-x">
                 <div className="prewipe-card-x-login">
-                    <p>Si quieres ver más contenido, accede o regístrate</p>
+                    <p>Si quieres ver más contenido, navegar y votar; accede o regístrate</p>
                 </div>
             </div>
         </>

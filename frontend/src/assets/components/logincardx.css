@@ -7,7 +7,7 @@
     background-color: #fff;
     border-radius: 30px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .prewipe-card-x-login{
@@ -16,5 +16,7 @@
 }
 
 .prewipe-card-x-login > p{
+    margin: 5px;
+    padding: 0px;
     text-align:center;
 }

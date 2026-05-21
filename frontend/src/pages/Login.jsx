@@ -1,5 +1,4 @@
 import Logincardxcontent from '../assets/components/Logincardxcontent'
-import PreWipeCard from '../assets/components/PrewipeCard'
 import PreWipeCardPubli from '../assets/components/PrewipeCardPubli'
 import Headerinv from '../assets/components/Headerinv'
 import CatBar from '../assets/components/CatBar'
