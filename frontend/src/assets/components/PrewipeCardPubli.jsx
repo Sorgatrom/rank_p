@@ -18,7 +18,6 @@ function PreWipeCardPubli({name,content, marca, url}) {
                     </div>
                     <p>{content}</p>
                 </div>
-                <div className="prewipe-card-publi-icon"></div>
             </div>
         </>
     )};

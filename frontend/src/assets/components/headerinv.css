@@ -1,0 +1,70 @@
+.header-main{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.header-main-logo{
+    height: 40px;
+    width: 40px;
+    margin:0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url('../resources/Iconos/logo ppal svg.svg');
+    min-width: 40px;
+}
+
+.header-main-info{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin:0px;   
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.header-main-info:hover{
+    background-color: #f3f3f3;
+    transform: translateY(-2px); /* Mueve el botón 3 píxeles hacia arriba */
+    box-shadow: 0 3px 3px rgba(129, 129, 129, 0.3); /* Añade una sombra debajo */
+    filter: grayscale(0%);
+}
+
+.header-main-info > p{
+    margin:0px;  
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333;
+  
+}
+
+.header-main-info-div{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    font-size: 14px;
+    color: #333;
+}
+
+.icono_pc{
+    margin:0px;
+    height: 30px;
+    width: 30px;
+    background-image: url('../resources/iconos/Iconos categorias.svg');
+    background-position: -330px -90px;
+    margin-right: 5px;
+    scale: 1.2;
+}
+
+ 

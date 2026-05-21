@@ -4,6 +4,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntradaController;
+use App\Http\Controllers\AuthController; // <-- Importamos el nuevo controlador paara la autentificación
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -11,3 +12,6 @@ Route::get('/user', function (Request $request) {
 
 // Tu nueva ruta para leer las entradas desde React
 Route::get('/entradas', [EntradaController::class, 'index']);
+
+// NUESTRA NUEVA RUTA DE LOGIN
+Route::post('/login', [AuthController::class, 'login']);

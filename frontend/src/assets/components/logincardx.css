@@ -1,0 +1,20 @@
+.prewipe-card-x{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.prewipe-card-x-login{
+    margin: 0px;
+    padding: 0px;
+}
+
+.prewipe-card-x-login > p{
+    text-align:center;
+}
