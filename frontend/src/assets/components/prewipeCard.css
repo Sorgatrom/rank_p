@@ -52,7 +52,7 @@
     width: 30px;
     margin-left: 15px;
     background-image: url('../resources/iconos/Iconos categorias.svg');
-    background-position: -300px -3px;
+    background-position: -330px -3px;
 
     /*para que en accesibilidad el texto del botón no se muestre, pero que siga siendo accesible para lectores de pantalla*/
     text-indent: -9999px; /* Mueve el texto fuera de la pantalla */
@@ -63,6 +63,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
+    filter: grayscale();
 }
 
 .prewipe-card-liked > button{
