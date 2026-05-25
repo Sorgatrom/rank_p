@@ -5,6 +5,7 @@ import PreWipeCard from '../assets/components/PrewipeCard'
 import PreWipeCardPubli from '../assets/components/PrewipeCardPubli'
 import HeaderMain from '../assets/components/HeaderMain'
 import CatBar from '../assets/components/CatBar'
+import PostCard from '../assets/components/PostCard'
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function Dashboard() {
     <>
       <HeaderMain user="manolito" tokens={1} />
       <CatBar/>
+      <PostCard/>
       <PreWipeCard content="Compilando el servidor..." />
       <PreWipeCard content="Debuggeando el componente..." />
       <PreWipeCard content="Push a la rama main" />

@@ -53,7 +53,7 @@
 
 .header-main-info{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     align-items:center;
     background-color: #f0f0f0;
     border-radius: 20px;
@@ -162,3 +162,9 @@
     cursor: pointer;
 }
  
+@media (max-width: 600px) {
+    .header-main-info-div > p{
+        display:none;
+    }
+}
+

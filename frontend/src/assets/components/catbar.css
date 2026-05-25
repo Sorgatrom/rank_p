@@ -68,3 +68,9 @@
     filter: grayscale(0%);
 
 }
+
+@media (max-width: 600px) {
+    .retro-categoria-barra, .avan-categoria-barra {
+        display: none; /* Oculta los botones en pantallas pequeñas */
+    }
+}

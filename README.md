@@ -130,7 +130,7 @@ src/
 │   ├── EntradaCard.jsx (El diseño individual de un post/entrada)
 │   └── FormInput.jsx   (Un campo de texto personalizado)
 │
-├── pages/              <-- Tus pantallas (lo que pones en App.jsx)
+├── pages/              <-- pantallas
 │   ├── Login.jsx       (Pantalla de acceso)
 │   ├── Dashboard.jsx   (La página principal donde listar entradas)
 │   ├── Dashboard2.jsx  (La página principal donde filtrar entradas)

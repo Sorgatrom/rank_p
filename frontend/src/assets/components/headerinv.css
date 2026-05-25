@@ -149,6 +149,11 @@
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    .header-main-info-div > p{
+        display:none;
+    }
+}
 
 
  
