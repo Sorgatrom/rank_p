@@ -38,12 +38,17 @@
 }
 
 .postcard-form-textarea > textarea{
-    height: 50px;
+    height: 60px;
     border-style: none;
     resize: none;
     text-align: start;
     font-size: 16px;
     text-align:left;
+    scrollbar-width: none;
+}
+
+.postcard-form-textarea::-webkit-scrollbar {
+    display: none;
 }
 
 .postcard-form-textarea > p{
@@ -53,6 +58,20 @@
     font-style: oblique;
     color: silver;
 
+}
+
+@media (max-width: 600px) {
+    .postcard-form-textarea > p{
+    display: none;
+    }
+    .postcard-form-textarea > textarea{
+    height: 60px;
+    scrollbar-width: none;
+
+    }
+    .postcard-form-textarea::-webkit-scrollbar {
+    display: none;
+}
 }
 
 .postcard-form-textarea > textarea:focus{
