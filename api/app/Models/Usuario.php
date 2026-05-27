@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens; // <-- Importamos la herramienta que genera tokens para la validación de usuarios
 
-class Usuario extends Model
-{
+class Usuario extends Model{
 
     use HasApiTokens; //Esto es para que genere tokens para la validación de usuarios!!!
     
@@ -25,4 +24,10 @@ class Usuario extends Model
     protected $hidden = [
         'password'
     ];
+
+    //relación "uno a muchos" que permite acceder fácilmente a todas las publicaciones asociadas a un usuario mediante un simple atajo.
+    //a esto nos referimos en las EntradasController
+    public function entradas() {
+        return $this->hasMany(Entrada::class, 'usuario_id');
+    }
 }

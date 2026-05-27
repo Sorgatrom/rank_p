@@ -15,3 +15,8 @@ Route::get('/entradas', [EntradaController::class, 'index']);
 
 // NUESTRA NUEVA RUTA DE LOGIN
 Route::post('/login', [AuthController::class, 'login']);
+
+// RUTA DE ENTRADAS!
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/entradas', [EntradaController::class, 'store']);
+});
