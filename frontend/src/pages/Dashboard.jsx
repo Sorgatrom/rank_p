@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import PreWipeCard from '../assets/components/PrewipeCard'
 import PreWipeCardPubli from '../assets/components/PrewipeCardPubli'
 import HeaderMain from '../assets/components/HeaderMain'
-import CatBar from '../assets/components/CatBar'
+import CatBar from '../assets/components/minis/CatBar'
+import {CategoriaProvisor} from '../assets/components/minis/CategoriasProvisor' //La emisora de radio!
 import PostCard from '../assets/components/PostCard'
 
 function Dashboard() {
@@ -24,15 +25,19 @@ function Dashboard() {
   };
 
   return (
+    //La categoríaprovisor será la que podamos escuchar según que botón de las categorias esté pulsado tanto para postear como para ver contenido.
+    //la hemos definido en minis (botones)
     <>
       <HeaderMain user="manolito" tokens={1} />
-      <CatBar/>
-      <PostCard/>
-      <PreWipeCard content="Compilando el servidor..." />
-      <PreWipeCard content="Debuggeando el componente..." />
-      <PreWipeCard content="Push a la rama main" />
-      <PreWipeCardPubli name="Coca-Cola" content="Disfruta del nuevo sabor de nuestra Coca-Cola sabor paella!" marca="cocacola" url="https://www.coca-cola.com/es/es"  />
-      <PreWipeCard content="Error 404: Café no encontrado" />
+      <CategoriaProvisor>
+        <CatBar/>
+        <PostCard/>
+        <PreWipeCard content="Compilando el servidor..." />
+        <PreWipeCard content="Debuggeando el componente..." />
+        <PreWipeCard content="Push a la rama main" />
+        <PreWipeCardPubli name="Coca-Cola" content="Disfruta del nuevo sabor de nuestra Coca-Cola sabor paella!" marca="cocacola" url="https://www.coca-cola.com/es/es"  />
+        <PreWipeCard content="Error 404: Café no encontrado" />
+      </CategoriaProvisor>
     </>
   )
 }

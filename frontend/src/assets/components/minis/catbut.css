@@ -10,9 +10,39 @@
     padding-right: 10px;
     width: fit-content;
     transition: all 0.3s ease;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    filter: grayscale(100%);
 }
 
+.categoria-button.activo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 25px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    transition: all 0.3s ease;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #227da1;
+    filter: grayscale(0%);
+}
+
+
 .categoria-button-Entretenimiento{
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+    background-image: url('../../resources/iconos/Iconos categorias.svg');
+}
+
+.categoria-button-Entretenimiento.activo{
     height: 30px;
     width: 30px;
     padding-right: 3px;
@@ -123,11 +153,19 @@
     background-position: 30px 0px
 }
 
-.categoria-button:hover{
-    cursor: pointer;
-    background-color: #f3f3f3;
-    transform: translateY(-2px); /* Mueve el botón 3 píxeles hacia arriba */
-    box-shadow: 0 3px 3px rgba(129, 129, 129, 0.3); /* Añade una sombra debajo */
+
+/*En pantallas táctiles el hover se queda pillado coprobamos si existe ratón*/
+
+/* Le decimos a CSS que compruebe si el dispositivo tiene "ratón" */
+@media (hover: hover) {
+    
+    /* Metemos tu hover aquí dentro */
+    .categoria-button:hover {
+        cursor: pointer;
+        background-color: #f3f3f3;
+        transform: translateY(-2px);
+        box-shadow: 0 3px 3px rgba(129, 129, 129, 0.3);
+    }
     
 }
 
