@@ -15,6 +15,7 @@
     overflow-x: auto;
     border-radius: 25px;
     scrollbar-width: none; /*Para Firefox*/
+    padding-top: 2px;
 }
 
 .carrusel-oculto::-webkit-scrollbar {
