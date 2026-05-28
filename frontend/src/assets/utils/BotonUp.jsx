@@ -39,7 +39,7 @@ function BotonUp() {
             {/* Si mostrarBoton es true, dibujamos el botón */}
             {mostrarBoton && (
                 <button className="boton-subir" onClick={subirArriba}>
-                    ⬆️
+                    <div className='boton-subir-logo'></div>
                 </button>
             )}
         </>
