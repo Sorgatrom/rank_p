@@ -1,6 +1,7 @@
 import './postcard.css'
 import { useContext, useState } from 'react';
 import { CategoriaContext } from '../components/minis/CategoriasProvisor';
+import { TokenContext } from './minis/TokenProvisor';
 
 function PostCard({}) {
     const { categoriaElegida } = useContext(CategoriaContext);
@@ -14,6 +15,9 @@ function PostCard({}) {
 
     //Estado para mostrar mensajes de éxito o error al usuario
     const [mensaje, setMensaje] = useState("");
+
+    //Nos traemos los tokens para jugar con ellos cuando no haya tokens
+    const { tokens, setTokens } = useContext(TokenContext);
 
     const manejarCambio = (evento) => {
         const nuevoTexto = evento.target.value;
@@ -78,7 +82,22 @@ function PostCard({}) {
         }
     };
 
-
+    //Si el usuario no tiene tokens, se pinta esto y se detiene aquí.
+    if (tokens <= 0) {
+        return (
+            <div className="postcard-main-container-2">
+                <div className="postcard-main-container-div-2">
+                    <div className="postcard-main-container-div-div">
+                        <h3>Has agotado tus tokens </h3>
+                        <div className='postacrd-token-logo'></div>
+                    </div>
+                    <p>
+                        No puedes publicar más por ahora. Vuelve mañana para seguir aportando a la comunidad.
+                    </p>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="postcard-main-container">

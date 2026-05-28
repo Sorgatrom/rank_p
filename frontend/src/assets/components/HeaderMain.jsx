@@ -1,9 +1,12 @@
 import './headerMain.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { TimerFlag } from "../utils/TimerFlag.jsx"
+import { TokenContext } from './minis/TokenProvisor.jsx'
 
 
-function HeaderMain({user, tokens}) {
+function HeaderMain({user}) {
+    //Nos traemos la variable del TokenProvisor
+    const { tokens } = useContext(TokenContext);
 
     return (
         <>

@@ -1,0 +1,21 @@
+.boton-subir {
+position: fixed;
+    top: 15px; /* Distancia desde abajo */
+    left: 50%;    /* Lo mueve al centro de la pantalla */
+    transform: translateX(-50%); /* Lo alinea perfectamente a su propio centro */
+    
+    padding: 10px 20px; 
+    font-size: 20px;
+    background-color: #333; /* Tu color principal */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Forma de píldora redondeada */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.boton-subir:hover {
+    background-color: #555;
+}
