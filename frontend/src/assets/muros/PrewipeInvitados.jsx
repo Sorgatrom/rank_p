@@ -1,6 +1,6 @@
 import './prewipeinvitados.css'
 import React, { useState, useEffect, useContext } from 'react';
-import { CategoriaContext } from '../components/minis/CategoriasProvisor'
+import { CategoriaContext } from '../utils/CategoriasProvisor'
 import PrewipeCardPubli from '../components/PrewipeCardPubli'
 import Logincardxcontent from '../components/Logincardxcontent'
 import Logincardx from '../components/Logincardx'

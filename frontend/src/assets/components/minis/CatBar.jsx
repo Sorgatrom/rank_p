@@ -1,5 +1,5 @@
 import { useContext,useRef } from 'react'; //usaremos el hook useContext para conectarnos a la "emisora de radio" y emitir la categoria seleccionada.
-import { CategoriaContext, CategoriaProvisor } from './CategoriasProvisor';
+import { CategoriaContext, CategoriaProvisor } from '../../utils/CategoriasProvisor';
 import './catbar.css';
 import CatBut from "./CatBut"
 

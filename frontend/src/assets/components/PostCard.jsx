@@ -1,7 +1,7 @@
 import './postcard.css'
 import { useContext, useState } from 'react';
-import { CategoriaContext } from '../components/minis/CategoriasProvisor';
-import { TokenContext } from './minis/TokenProvisor';
+import { CategoriaContext } from '../utils/CategoriasProvisor';
+import { TokenContext } from '../utils/TokenProvisor';
 
 function PostCard({}) {
     const { categoriaElegida } = useContext(CategoriaContext);

@@ -1,11 +1,10 @@
 import './headerMain.css';
 import { useState, useEffect, useContext } from 'react';
-import { TimerFlag } from "../utils/TimerFlag.jsx"
-import { TokenContext } from './minis/TokenProvisor.jsx'
-
+import { TimerFlag } from "../utils/TimerFlag.jsx"; // Tu banderita inteligente
+import { TokenContext } from '../utils/TokenProvisor.jsx';
 
 function HeaderMain({user}) {
-    //Nos traemos la variable del TokenProvisor
+    // Nos traemos la variable del TokenProvisor
     const { tokens } = useContext(TokenContext);
 
     return (
@@ -19,6 +18,7 @@ function HeaderMain({user}) {
                 </div>
                 <div className="header-main-info">
                     <TimerFlag mensaje1="Contribuye" mensaje2="Cribado" mensaje3="Resultados"/>
+                    
                     <p>{tokens}/1</p>
                     <div className="header-main-info-div2"></div>
                     <div className="header-main-user">
@@ -26,6 +26,7 @@ function HeaderMain({user}) {
                 </div>
             </div>
         </>
-    )};
+    );
+}
 
-    export default HeaderMain;
+export default HeaderMain;
