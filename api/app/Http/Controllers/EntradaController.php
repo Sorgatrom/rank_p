@@ -61,6 +61,18 @@ class EntradaController extends Controller
 
     public function store(Request $request) {
 
+        //EL CANDADO CUANDO NO SEA LA HORA!
+        // Calculamos la hora exacta en Madrid para que se ajuste a la hora de las fases y no se bloquee la subida de contenido!!!
+        $horaActual = now()->setTimezone('Europe/Madrid')->format('H:i');
+
+        // Comprobamos si estamos en Fase 2 o Fase 3 (de 18:00 a 01:59)
+        // Si es así, cortamos la ejecución inmediatamente con un error 403
+        if ($horaActual >= '18:00' || $horaActual < '02:00') {
+            return response()->json([
+                'mensaje' => 'Las publicaciones están cerradas. Es hora de votar y ver resultados.'
+            ], 403);
+        }
+
         //Validamos que nos llegue el contenido y la categoria
         $request->validate([
             'contenido' => 'required|string|max:262',

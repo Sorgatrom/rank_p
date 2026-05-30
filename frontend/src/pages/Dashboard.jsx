@@ -4,11 +4,12 @@ import { useEffect } from 'react';
 import PreWipeCard from '../assets/components/PrewipeCard'
 import PreWipeCardPubli from '../assets/components/PrewipeCardPubli'
 import HeaderMain from '../assets/components/HeaderMain'
-import CatBar from '../assets/components/minis/CatBar'
+import CatBar from '../assets/components/barra_categorias/CatBar'
 import { TokenProvisor } from '../assets/utils/TokenProvisor';
 import {CategoriaProvisor} from '../assets/utils/CategoriasProvisor' //La emisora de radio!
-import {TimerProvisor} from '../assets/utils/TimerProvisor'
 import PostCard from '../assets/components/PostCard'
+import { TimerProvisor } from '../assets/utils/TimerProvisor';
+import { MuroSwitcher } from '../assets/utils/muroSwitcher';
 
 
 function Dashboard() {
@@ -29,29 +30,18 @@ function Dashboard() {
 
   return (
     //La categoríaprovisor será la que podamos escuchar según que botón de las categorias esté pulsado tanto para postear como para ver contenido.
-    //la hemos definido en minis (botones)
+    //la hemos definido en barra_categorias
     <>
-    <TimerProvisor>
-      <TokenProvisor>
-        <HeaderMain user="manolito"/>
-        <CategoriaProvisor>
-          <CatBar/>
-          <PostCard/>
-        </CategoriaProvisor>
-      </TokenProvisor>
-        <PreWipeCard content="Compilando el servidor..." />
-        <PreWipeCard content="Debuggeando el componente..." />
-        <PreWipeCard content="Push a la rama main" />
-        <PreWipeCardPubli name="Coca-Cola" content="Disfruta del nuevo sabor de nuestra Coca-Cola sabor paella!" marca="cocacola" url="https://www.coca-cola.com/es/es"  />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-        <PreWipeCard content="Error 404: Café no encontrado" />
-    </TimerProvisor>
+      <TimerProvisor>
+        <TokenProvisor>
+          <HeaderMain user="manolito"/>
+          <CategoriaProvisor>
+            <CatBar/>
+            <PostCard/>
+            <MuroSwitcher/>
+          </CategoriaProvisor>
+        </TokenProvisor>
+      </TimerProvisor>
     </>
   )
 }

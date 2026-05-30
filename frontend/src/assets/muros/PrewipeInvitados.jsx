@@ -63,8 +63,7 @@ function PrewipeInvitado() {
     });
     
     return (
-        <div className="muro-invitado-container">
-            
+        <React.Fragment>    
             {cargando && <div className="cargando-logo"></div>}
 
             {!cargando && entradas.length > 0 && (
@@ -81,9 +80,8 @@ function PrewipeInvitado() {
                 <p className="mensaje">
                     Aún no hay publicaciones en {categoriaElegida}. ¡Anímate a entrar!
                 </p>
-            )}
-            
-        </div>
+            )}    
+        </React.Fragment>
     )
     
 }

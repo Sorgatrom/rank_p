@@ -3,8 +3,13 @@ import { useContext, useState } from 'react';
 import { CategoriaContext } from '../utils/CategoriasProvisor';
 import { TokenContext } from '../utils/TokenProvisor';
 
+import { useTimer } from '../utils/TimerProvisor'; //Importamos el reloj
+
 function PostCard({}) {
     const { categoriaElegida } = useContext(CategoriaContext);
+
+    //Extraemos la fase actual del reloj para desactivar la escritura
+    const { fase } = useTimer();
 
     //Creamos el estado para guardar el texto y definir el límite.
     const [texto, setTexto] = useState("");
@@ -18,6 +23,12 @@ function PostCard({}) {
 
     //Nos traemos los tokens para jugar con ellos cuando no haya tokens
     const { tokens, setTokens } = useContext(TokenContext);
+
+    //EL CANDADO VISUAL: Retorno temprano si no es Fase 1!!!!!! Pero tampoco dejaremos que se puedan hacer publicaciones en otras fases en el back por si las moscas
+    // Al ponerlo aquí, React ignora todo el código de abajo y no pinta nada en el DOM.
+    if (fase !== 1) {
+        return null;
+    };
 
     const manejarCambio = (evento) => {
         const nuevoTexto = evento.target.value;

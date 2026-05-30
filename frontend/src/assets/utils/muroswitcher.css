@@ -1,5 +1,5 @@
+.cargando_icono{
 
-.cargando-logo{
     height: 30px;
     width: 30px;
     background-color: #f3f3f3; 
@@ -23,9 +23,4 @@
     100% { 
         transform: rotate(-35deg); /* Vuelve a la izquierda para cerrar el bucle suavemente */
     }
-}
-
-.mensaje{
-    text-align: center;
-    color: gray;
 }

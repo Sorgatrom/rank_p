@@ -1,5 +1,5 @@
 import React from "react";
-import { useTimer } from "./TimerProvisor"; // Importamos nuestro hook
+import { useTimer } from './TimerProvisor'; // Importamos nuestro hook
 
 export const TimerFlag = ({mensaje1, mensaje2, mensaje3}) => {
     
