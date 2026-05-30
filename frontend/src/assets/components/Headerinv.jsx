@@ -15,8 +15,14 @@ function Headerinv({}) {
 
     const navigate = useNavigate(); //Herramienta para redirigir la pag.
 
+    //Creamos el estado para el logo de carga
+    const [cargando, setCargando] = useState(false);
+
     const manejarSubmit = async (e) => {
         e.preventDefault(); //Evitar que se recargue la pag al enviar formulario.
+
+        //Encendemos el interruptor de carga al empezar (ANIMACIÓN)
+        setCargando(true)
         try{
             //Usamos un try por si el serv no responde
             //hacemos la llamada a la API de Laravel
@@ -43,6 +49,9 @@ function Headerinv({}) {
             }
         } catch (err) {
             setError('Error de conexión con el servidor');
+        } finally {
+           //Apagamos el interruptor SIEMPRE al terminar, haya éxito o error
+            setCargando(false); 
         }
     };
 
@@ -69,7 +78,19 @@ function Headerinv({}) {
                                 placeholder='Password'
                                 aria-label='Constraseña de Usuario'
                             />
-                            <button className="headerinv-main-button" type='submit'>Go</button>
+                            <button 
+                               className="headerinv-main-button" 
+                                type='submit'
+                                disabled={cargando} // Desactiva el botón si 'cargando' es true
+                            >
+                            {cargando ? (
+                                // Si está cargando, mostramos este div que animaremos en CSS
+                                <div className="spinner-carga"></div>
+                            ) : (
+                                // Si no está cargando, mostramos el texto normal
+                                'GO!'
+                            )}
+                            </button>
                         </form>
                     </div>
                 </div>  

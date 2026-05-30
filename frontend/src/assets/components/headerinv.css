@@ -143,10 +143,22 @@
 .headerinv-main-button{
     width: fit-content;
     height: 30px;
+    width: 40px;
     border-radius: 51px;
     background-color: #ffff;
     border-style: none;
     cursor: pointer;
+}
+
+.spinner-carga{
+    scale: 0.8;
+    height: 30px;
+    width: 30px;
+    background-image: url("../resources/iconos/logo_carga.gif");
+
+    /* -- LA ANIMACIÓN DEL METRÓNOMO -- */
+    transform-origin: center; 
+    animation: balanceo 0.9s ease-in-out infinite; 
 }
 
 @media (max-width: 600px) {
