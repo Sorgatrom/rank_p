@@ -3,16 +3,30 @@
 }
 
 .cargando-logo{
+    scale: 1.2;
     height: 30px;
     width: 30px;
-    padding: 10px 10px; 
-    background-color: #cc1b1b; 
-    color: white;
-    border-style: solid;
-    border-color: #ffff;
-    border-radius: 51px; 
+    background-color: #f3f3f3; 
     margin: 20px auto;
+    background-image: url("../resources/iconos/logo_carga.gif");
 
+
+
+    /* -- LA ANIMACIÓN DEL METRÓNOMO -- */
+    transform-origin: center; 
+    animation: balanceo 0.9s ease-in-out infinite; 
+}
+
+@keyframes balanceo {
+    0% { 
+        transform: rotate(-35deg); /* Empieza inclinado a la izquierda */
+    }
+    50% { 
+        transform: rotate(35deg);  /* A la mitad del tiempo, llega a la derecha */
+    }
+    100% { 
+        transform: rotate(-35deg); /* Vuelve a la izquierda para cerrar el bucle suavemente */
+    }
 }
 
 .mensaje{
