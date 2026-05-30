@@ -168,3 +168,16 @@
     }
 }
 
+/*Esto es para quitar la sombra que pone por defecto los navegados al autorellenar los formularios*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    
+    /*Tapamos el fondo azul con una sombra interna del color que queramos (ej: white) */
+    -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset !important;
+    
+    /*Forzamos el color del texto (ej: black) */
+    -webkit-text-fill-color: black !important;
+}
+

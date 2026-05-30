@@ -1,0 +1,21 @@
+.muro-invitado-container{
+    margin-top: 15px;
+}
+
+.cargando-logo{
+    height: 30px;
+    width: 30px;
+    padding: 10px 10px; 
+    background-color: #cc1b1b; 
+    color: white;
+    border-style: solid;
+    border-color: #ffff;
+    border-radius: 51px; 
+    margin: 20px auto;
+
+}
+
+.mensaje{
+    text-align: center;
+    color: gray;
+}

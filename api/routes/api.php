@@ -10,13 +10,27 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-// Tu nueva ruta para leer las entradas desde React
-Route::get('/entradas', [EntradaController::class, 'index']);
 
-// NUESTRA NUEVA RUTA DE LOGIN
+//RUTA DE LOGIN
 Route::post('/login', [AuthController::class, 'login']);
 
-// RUTA DE ENTRADAS!
-Route::middleware('auth:sanctum')->group(function () {
+//Ruta de etradas para el usuario no regristado
+Route::get('/publico/entradas/{categoria}', [EntradaController::class, 'prewipeInvitados']);
+
+
+//Protegemos las rutas para que solo los usuarios logueados puedan acceder
+Route::middleware('auth:sanctum')->group(function () { //Importantisimo.
+    
+    //Ruta para publicar una nueva entrada
     Route::post('/entradas', [EntradaController::class, 'store']);
+
+    //PREWIPE
+    Route::get('/entradas/{categoria}/prewipe', [EntradaController::class, 'prewipe']);
+
+    //FILTRADO
+    Route::get('/entradas/{categoria}/filtrado', [EntradaController::class, 'filtrado']);
+
+    //RANKING
+    Route::get('/entradas/{categoria}/rank', [EntradaController::class, 'obtenerRank']);
+    
 });

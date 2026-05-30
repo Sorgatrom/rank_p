@@ -8,7 +8,7 @@ export const CategoriaContext = createContext();
 
 //Creamos el emisor que transmite la señal y guarda el estado.
 export function CategoriaProvisor({children}) {
-    const [categoriaElegida, setCategoriaElegida] = useState("");
+    const [categoriaElegida, setCategoriaElegida] = useState("Entretenimiento");
 
     return (
         //todo lo que esté dentro del children podrá escuchar la "radio"

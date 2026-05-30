@@ -17,4 +17,14 @@ class Entrada extends Model
         'usuario_id', 'contenido', 'categoria',
     ];
 
+    //Relación que conecta al usuario con su entrada
+    public function usuario() {
+        return $this->belongsTo(Usuario::class, 'usuario_id');
+    }
+
+    // Le decimos a la entrada que puede tener muchos likes
+    public function likes() {
+        return $this->hasMany(Like::class, 'entrada_id');
+    }
+
 }
