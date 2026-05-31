@@ -69,7 +69,7 @@ function Fase2() { // Quitamos CategoriaContext de los paréntesis
             );
         }
         // si no toca, se entrega la entrada.
-        return <PreWipeCard key={entrada.id} content={entrada.contenido} />;
+        return <PreWipeCard key={entrada.id} id={entrada.id} content={entrada.contenido} />;
     });
     
     return (

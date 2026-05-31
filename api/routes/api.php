@@ -32,5 +32,8 @@ Route::middleware('auth:sanctum')->group(function () { //Importantisimo.
 
     //RANKING
     Route::get('/entradas/{categoria}/rank', [EntradaController::class, 'obtenerRank']);
+
+    //LIKES
+    Route::post('/entradas/{id}/like', [EntradaController::class, 'toggleLike']);
     
 });

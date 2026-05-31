@@ -24,7 +24,8 @@ class Entrada extends Model
 
     // Le decimos a la entrada que puede tener muchos likes
     public function likes() {
-        return $this->hasMany(Like::class, 'entrada_id');
-    }
+    return $this->belongsToMany(User::class, 'likes', 'entrada_id', 'usuario_id')
+                ->withPivot('creado_en');
+}
 
 }

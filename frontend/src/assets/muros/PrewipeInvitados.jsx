@@ -59,7 +59,7 @@ function PrewipeInvitado() {
         }
 
         //Fuera del if, metemos las entradas normales,
-        return <Logincardxcontent key={entrada.id} content={entrada.contenido} />;
+        return <Logincardxcontent key={entrada.id} id={entrada.id} content={entrada.contenido} />;
     });
     
     return (

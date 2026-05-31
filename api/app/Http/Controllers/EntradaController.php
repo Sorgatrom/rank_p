@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Entrada;
+use App\Models\Like;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; // <-- IMPORTANTE Para identificar al usuario del Like!
 
 class EntradaController extends Controller
 {
@@ -59,6 +61,8 @@ class EntradaController extends Controller
         return response()->json($entradas);
     }
 
+    
+
     public function store(Request $request) {
 
         //EL CANDADO CUANDO NO SEA LA HORA!
@@ -102,6 +106,33 @@ class EntradaController extends Controller
             'tokens_restantes' => $usuario->tokens,
             'entrada' => $entrada
         ], 201);
+    }
+
+    //Aquí gestionamos los likes!!
+
+    public function toggleLike($id)
+    {
+        $usuario_id = Auth::id(); // Sacamos el usuario logueado gracias a Sanctum
+
+        // 1. Buscamos si ya existe el like
+        $likeExistente = Like::where('usuario_id', $usuario_id)
+                             ->where('entrada_id', $id)
+                             ->first();
+
+        // 2. Si existe, lo borramos (Quitar Like)
+        if ($likeExistente) {
+            $likeExistente->delete();
+            return response()->json(['mensaje' => 'Like eliminado']);
+        } 
+        
+        // 3. Si no existe, lo creamos (Dar Like) respetando tu columna creado_en
+        Like::insert([
+            'usuario_id' => $usuario_id,
+            'entrada_id' => $id,
+            'creado_en' => now() 
+        ]);
+        
+        return response()->json(['mensaje' => 'Like guardado']);
     }
 }
 
