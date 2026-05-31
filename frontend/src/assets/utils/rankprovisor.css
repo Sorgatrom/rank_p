@@ -1,0 +1,28 @@
+.puesto-1{
+    height: 30px;
+    width: 15px;
+    background-image: url('../resources/Iconos/Iconos\ Ranks\ Puestos.svg');
+    background-position: 0px 0px;
+}
+
+.puesto-2{
+    height: 30px;
+    width: 15px;
+    background-image: url('../resources/Iconos/Iconos\ Ranks\ Puestos.svg');
+    background-position: 30px 0px
+
+}
+
+.puesto-3{
+    height: 30px;
+    width: 15px;
+    background-image: url('../resources/Iconos/Iconos\ Ranks\ Puestos.svg');
+    background-position: 60px 0px
+
+}
+
+.puesto-normal{
+    font-size: 22px;
+    margin: 0;
+    font-weight: lighter;
+}

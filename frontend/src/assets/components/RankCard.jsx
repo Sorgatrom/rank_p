@@ -1,5 +1,6 @@
 import './rankcard.css'
 import { useState, useEffect } from 'react'
+import RankProvisor from '../utils/RankProvisor';
 
 
 function RankCard({pos, user, medallas, content, sumlikes }) {
@@ -7,7 +8,7 @@ function RankCard({pos, user, medallas, content, sumlikes }) {
     return (
         <React.Fragment>
             <div className="">
-                <p className="">{pos}</p>
+                <RankProvisor>{pos}</RankProvisor>
                 <div className="">
                     <div className="">
                         <h2 className="">{user}</h2>

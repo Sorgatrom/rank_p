@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './prewipeCard.css'
 import { generateFakeName } from "../utils/generador_nombres"
+import RankProvisor from '../utils/RankProvisor';
 
 
 // Las props que recibe el componente debe de llevar id.
