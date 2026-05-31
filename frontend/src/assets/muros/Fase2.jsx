@@ -63,7 +63,6 @@ function Fase2() { // Quitamos CategoriaContext de los paréntesis
                         url="https://www.coca-cola.com/es/es"
                     />
 
-                    {/* CORREGIDO: Añadidos key, id y la memoria del like */}
                     <PreWipeCard 
                         key={entrada.id} 
                         id={entrada.id} 

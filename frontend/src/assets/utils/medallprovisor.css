@@ -1,0 +1,105 @@
+.div-medallas-s{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 0px;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f3f3f3;
+    width: fit-content;
+}
+
+.div-medallas-n{
+    display: none;
+}
+
+.div-oro-n{
+    display: none;
+}
+
+.div-oro-s{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+
+}
+
+.div-oro-s > p{
+    font-weight: lighter;
+    font-style: oblique;
+    color: grey;
+    margin: 0px;
+    margin-right: 3px;
+}
+
+.div-oro-s > div{
+    margin: 0px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../resources/Iconos/Iconos\ Ranks.svg');
+
+}
+
+.div-plata-n{
+    display: none;
+}
+
+.div-plata-s{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+
+}
+
+.div-plata-s > p{
+    font-weight: lighter;
+    font-style: oblique;
+    color: grey;
+    margin: 0px;
+    margin-right: 3px;
+}
+
+.div-plata-s > div{
+    margin: 0px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../resources/Iconos/Iconos\ Ranks.svg');
+    background-position: -15px 0px;
+
+}
+
+.div-bronce-n{
+    display: none;
+}
+
+.div-bronce-s{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+
+}
+
+.div-bronce-s > p{
+    font-weight: lighter;
+    font-style: oblique;
+    color: grey;
+    margin: 0px;
+    margin-right: 3px;
+}
+
+.div-bronce-s > div{
+    margin: 0px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../resources/Iconos/Iconos\ Ranks.svg');
+    background-position: -30px 0px;
+
+}

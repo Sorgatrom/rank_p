@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './prewipeCard.css'
 import { generateFakeName } from "../utils/generador_nombres"
-import RankProvisor from '../utils/RankProvisor';
+import { MedallProvisor } from '../utils/MedallProvisor';
 
 
 // Las props que recibe el componente debe de llevar id.
@@ -58,6 +58,7 @@ function PreWipeCard({id, content, yaLeDiLike}) {
                 <div className="prewipe-card-fakenameandcontent">
                     <h2>{name}</h2>
                     <p>{content}</p>
+                    <MedallProvisor></MedallProvisor>
                 </div>
                 <div className={`prewipe-card${like ? '-liked' : '-like'}`}>
                     <button onClick={toggleLike}>{like ? 'Unlike' : 'Like'}</button>
