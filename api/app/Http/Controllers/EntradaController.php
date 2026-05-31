@@ -52,24 +52,26 @@ public function prewipe(Request $request, $categoria) {
     }
 
 
-    public function filtrado(Request $request, $categoria) {
+public function filtrado(Request $request, $categoria) {
         
         $usuario_id = $request->user()->id;
 
-        //Usamos La misma lógica para traer los datos; solo los que nos hacen falta para la fase 2; ojo el "has"
-        //solo es un filtro, no traemos los likes realmente.
+        // Buscamos TODOS los IDs de las entradas que tengan AL MENOS UN like (de cualquier usuario)
+        // Usamos unique() para que si una entrada tiene 50 likes, su ID solo aparezca una vez en la lista
+        $entradasConLikeIds = Like::pluck('entrada_id')->unique()->toArray();
+
+        //Traemos las entradas usando whereIn (solo trae las que su ID esté en la lista anterior)
         $entradas = Entrada::where('categoria', $categoria)
-            ->has('likes') //Importante para las entradas que no tengan ningun like; si vemos que hay muchas entradas empezamos a subir este número.
-            //Quizás sería bueno pensar en traer un número máximo de entradas... eso tendría un impacto directo en la idea de contenido "democrático" pero para el MPV nos servirá así.
-            ->inRandomOrder() //volvemos a traerlos de forma desordenada
+            ->whereIn('id', $entradasConLikeIds)
+            ->inRandomOrder() 
             ->get();
 
-        // Extraemos los IDs de las entradas a las que ESTE usuario ha dado like
+        //Extraemos los IDs de las entradas a las que ESTE usuario ha dado like (para el botón)
         $likesDelUsuario = Like::where('usuario_id', $usuario_id)
                                ->pluck('entrada_id')
                                ->toArray();
 
-        // Mapeamos para inyectar la propiedad booleana manualmente
+        //Mapeamos para inyectar la propiedad booleana manualmente esto es debido a que he diseñado yo la bbdd sin tomar en cuenta laravel que tiene "exigencias" estrictas
         $datosFormateados = $entradas->map(function ($entrada) use ($likesDelUsuario) {
             $arrayEntrada = $entrada->toArray();
             $arrayEntrada['ya_le_di_like'] = in_array($entrada->id, $likesDelUsuario);
