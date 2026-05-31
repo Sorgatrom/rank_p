@@ -96,8 +96,9 @@ function Fase3() {
 
             {!cargando && !error && entradas.length > 0 && (
                 <>
-                    {/* Imprimimos el ranking final */}
+                    <div className="cajon-ppal">
                     {rankingRenderizado}
+                    </div>
                 </>
             )}
 

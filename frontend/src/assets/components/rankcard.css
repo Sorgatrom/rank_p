@@ -1,0 +1,56 @@
+.card-ppal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-bloque-nombre{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.card-bloque-nombre > p{
+    margin: 0px;
+}
+
+
+.card-bloque-nombre-medalla{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.card-bloque-nombre-medalla > h2{
+    margin: 0px;
+    font-size: 17px;
+}
+
+.card-like-num{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.card-like-num > p{
+    font-size: 15px;
+    color: silver;
+    font-style: oblique;
+}
+
+.card-like-logo{
+    margin: 0px;
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    background-image: url('../resources/iconos/Iconos categorias.svg');
+    background-position: -330px 0px;
+}
