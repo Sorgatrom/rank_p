@@ -1,21 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './prewipeCard.css'
 import { generateFakeName } from "../utils/generador_nombres"
 
 
-//Las props que recibe el componente debe de llevar id.
-function PreWipeCard({id, content}) {
+// Las props que recibe el componente debe de llevar id.
+function PreWipeCard({id, content, yaLeDiLike}) {
 
+    //Convertimos estrictamente lo que llegue de Laravel a un Booleano (por si llega un 1 o un 0)
+    const estadoInicial = yaLeDiLike === true || yaLeDiLike === 1;
+
+    //Para saber si le he dado like a algo o no.
+    const [like, setLike] = useState(estadoInicial);
+
+    //EL VIGILANTE: Si Laravel actualiza el prop 'yaLeDiLike', forzamos al botón a cambiar
+    useEffect(() => {
+        setLike(yaLeDiLike === true || yaLeDiLike === 1);
+    }, [yaLeDiLike]);
     
-    const [like, setlike] = useState(false);
-    //Con esta solucion solo se genera una vez el nombre falso, y se mantiene el mismo aunque el componente se vuelva a renderizar por el cambio de estado del contador.
+    // Con esta solucion solo se genera una vez el nombre falso...
     const [name, setName] = useState(() => generateFakeName());
 
     const toggleLike = async () => {
-        //OJO debemos guardar el botón antes de tocarlo
+        // OJO debemos guardar el botón antes de tocarlo
         const estadoAnterior = like;
 
-        // ACTUALIZACIÓN OPTIMISTA!!: Cambiamos la vista instantáneamente !!! ESTO MOLA! lo cambia sin mandar info al back, pero el feedback es instantaneo
+        // ACTUALIZACIÓN OPTIMISTA
         setLike(!like);
 
         try {
@@ -28,16 +37,15 @@ function PreWipeCard({id, content}) {
                     'Authorization': `Bearer ${token}`,
                     'Accept': 'application/json',
                 }
-
             });
 
-            //Si el servidor devuelve un error
+            // Si el servidor devuelve un error
             if (!respuesta.ok) {
                 setLike(estadoAnterior); // Deshacemos el like visual
                 console.error("Error en el servidor al guardar el like");
             } 
         } catch (error) {
-            //por si no hay internet volvemos al estado anterior
+            // por si no hay internet volvemos al estado anterior
             setLike(estadoAnterior);
             console.error("Fallo de conexión", error);
         }
@@ -51,10 +59,11 @@ function PreWipeCard({id, content}) {
                     <p>{content}</p>
                 </div>
                 <div className={`prewipe-card${like ? '-liked' : '-like'}`}>
-                    <button onClick={toggleLike}>{like ? 'Like' : 'Unlike'}</button>
+                    <button onClick={toggleLike}>{like ? 'Unlike' : 'Like'}</button>
                 </div>
             </div>
         </>
-    )};
+    );
+}
 
 export default PreWipeCard;

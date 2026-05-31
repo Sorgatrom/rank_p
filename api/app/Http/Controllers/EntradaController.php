@@ -20,18 +20,42 @@ class EntradaController extends Controller
         return response()->json($entradas);
     }
 
-    public function prewipe($categoria) {
-        // Solo traemos la entrada. El 'usuario_id' ya viene incluido por defecto en la tabla.
-        // Esto es importante ya que para mantener el anonimato del usuario no podemos entregar en JSON un nombre de usuario relacionado con una entrada
-        // a través de la consola se podría ver estos datos "crudos", para esto solo traemos su User_id.
+public function prewipe(Request $request, $categoria) {
+        
+        $usuario_id = $request->user()->id;
+
+        // Nos traemos todas las entradas normales
         $entradas = Entrada::where('categoria', $categoria)
-            ->inRandomOrder() //Importantísimo para que las envie desordenada desde el back
+            ->inRandomOrder() 
             ->get();
 
-        return response()->json($entradas);
+        // Nos traemos TODOS los IDs de las entradas a las que ESTE usuario ha dado like.
+        // pluck() nos devuelve un array simple, ej: [1, 5, 12, 14]
+        $likesDelUsuario = Like::where('usuario_id', $usuario_id)
+                               ->pluck('entrada_id')
+                               ->toArray();
+
+        //Mapeamos las entradas para añadir nuestro dato manualmente
+        $datosFormateados = $entradas->map(function ($entrada) use ($likesDelUsuario) {
+            
+            // Convertimos la entrada a un array puro para que Laravel no nos oculte nada
+            $arrayEntrada = $entrada->toArray();
+            
+            // Si el ID de esta entrada está dentro de la lista de likes del usuario, es true
+            $arrayEntrada['ya_le_di_like'] = in_array($entrada->id, $likesDelUsuario);
+            
+            return $arrayEntrada;
+        });
+
+        // Devolvemos nuestro array fabricado a mano
+        return response()->json($datosFormateados);
     }
 
-    public function filtrado($categoria) {
+
+    public function filtrado(Request $request, $categoria) {
+        
+        $usuario_id = $request->user()->id;
+
         //Usamos La misma lógica para traer los datos; solo los que nos hacen falta para la fase 2; ojo el "has"
         //solo es un filtro, no traemos los likes realmente.
         $entradas = Entrada::where('categoria', $categoria)
@@ -40,7 +64,19 @@ class EntradaController extends Controller
             ->inRandomOrder() //volvemos a traerlos de forma desordenada
             ->get();
 
-        return response()->json($entradas);
+        // Extraemos los IDs de las entradas a las que ESTE usuario ha dado like
+        $likesDelUsuario = Like::where('usuario_id', $usuario_id)
+                               ->pluck('entrada_id')
+                               ->toArray();
+
+        // Mapeamos para inyectar la propiedad booleana manualmente
+        $datosFormateados = $entradas->map(function ($entrada) use ($likesDelUsuario) {
+            $arrayEntrada = $entrada->toArray();
+            $arrayEntrada['ya_le_di_like'] = in_array($entrada->id, $likesDelUsuario);
+            return $arrayEntrada;
+        });
+
+        return response()->json($datosFormateados);
     }
 
     public function obtenerRank($categoria) {
@@ -110,22 +146,20 @@ class EntradaController extends Controller
 
     //Aquí gestionamos los likes!!
 
-    public function toggleLike($id)
+public function toggleLike(Request $request, $id)
     {
-        $usuario_id = Auth::id(); // Sacamos el usuario logueado gracias a Sanctum
+        $usuario_id = $request->user()->id; 
 
-        // 1. Buscamos si ya existe el like
         $likeExistente = Like::where('usuario_id', $usuario_id)
                              ->where('entrada_id', $id)
                              ->first();
 
-        // 2. Si existe, lo borramos (Quitar Like)
+        // Al tener columna 'id', Laravel ya sabe borrar esto automáticamente
         if ($likeExistente) {
             $likeExistente->delete();
             return response()->json(['mensaje' => 'Like eliminado']);
         } 
         
-        // 3. Si no existe, lo creamos (Dar Like) respetando tu columna creado_en
         Like::insert([
             'usuario_id' => $usuario_id,
             'entrada_id' => $id,

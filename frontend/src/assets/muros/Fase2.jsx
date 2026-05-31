@@ -63,13 +63,26 @@ function Fase2() { // Quitamos CategoriaContext de los paréntesis
                         url="https://www.coca-cola.com/es/es"
                     />
 
-                    <PreWipeCard content={entrada.contenido}/>
+                    {/* CORREGIDO: Añadidos key, id y la memoria del like */}
+                    <PreWipeCard 
+                        key={entrada.id} 
+                        id={entrada.id} 
+                        content={entrada.contenido}
+                        yaLeDiLike={entrada.ya_le_di_like}
+                    />
 
                 </React.Fragment>
             );
         }
         // si no toca, se entrega la entrada.
-        return <PreWipeCard key={entrada.id} id={entrada.id} content={entrada.contenido} />;
+        return (
+            <PreWipeCard 
+                key={entrada.id} 
+                id={entrada.id} 
+                content={entrada.contenido} 
+                yaLeDiLike={entrada.ya_le_di_like} 
+            />
+        );
     });
     
     return (

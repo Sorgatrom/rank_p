@@ -34,7 +34,7 @@ function Dashboard() {
     <>
       <TimerProvisor>
         <TokenProvisor>
-          <HeaderMain user="manolito"/>
+          <HeaderMain/>
           <CategoriaProvisor>
             <CatBar/>
             <PostCard/>

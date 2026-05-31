@@ -63,13 +63,23 @@ function Fase1() { // 2. Dejamos los paréntesis vacíos
                         url="https://www.coca-cola.com/es/es"
                     />
 
-                    <PreWipeCard content={entrada.contenido}/>
+                    <PreWipeCard 
+                        key={entrada.id} 
+                        id={entrada.id} 
+                        content={entrada.contenido}
+                        yaLeDiLike={entrada.ya_le_di_like}
+                    />
 
                 </React.Fragment>
             );
         }
         // si no toca, se entrega la entrada.
-        return <PreWipeCard key={entrada.id} id={entrada.id} content={entrada.contenido} />;
+        return <PreWipeCard 
+            key={entrada.id} 
+            id={entrada.id} 
+            content={entrada.contenido} 
+            yaLeDiLike={entrada.ya_le_di_like}
+        />;
     });
     
     return (
