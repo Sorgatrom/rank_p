@@ -1,33 +1,32 @@
 import './fase3.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { CategoriaContext } from '../utils/CategoriasProvisor'
-import PreWipeCard from '../components/PrewipeCard';
+import RankCard from '../components/RankCard';
 import PreWipeCardPubli from '../components/PrewipeCardPubli';
 
 
-function Fase3({CategoriaContext}) {
+function Fase3() {
+    //Llamamos a la categoria (la radiooo)
+    const { categoriaElegida } = useContext(CategoriaContext);
 
-    //Preparamos los estados de la "memoria"
-    const [entradas, setEntradas] = useState([]); 
-    const [cargando, setCargando] = useState(true); 
+    //estados
+    const [entradas, setEntradas] = useState([]);
+    const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
 
-    //Usamos useEffect para que la app se lance automáticamente
+    //Vamos con la petición
     useEffect(() => {
-        const pedirEntradas = async () => {
+        const pedirRanking = async () => {
             try {
                 setCargando(true);
-                
-                //Rescatamos el token de Sanctum que guardamos en el Login
                 const token = localStorage.getItem('token');
-
-                //Hacemos la llamada al back inyectando la categoría
-                const respuesta = await fetch(`http://127.0.0.1:8000/api/filtrado/${categoriaActual}`, {
-                    method: 'GET', 
+                
+                const respuesta = await fetch(`http://127.0.0.1:8000/api/entradas/${categoriaElegida}/rank`, {
+                    method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'Authorization': `Bearer ${token}` 
+                        'Authorization': `Bearer ${token}`
                     }
                 });
 
@@ -35,58 +34,79 @@ function Fase3({CategoriaContext}) {
                     const datos = await respuesta.json();
                     setEntradas(datos);
                 } else {
-                    setError('No se pudieron cargar las entradas de esta categoría.');
+                    setError('No se pudo cargar el ranking.');
                 }
             } catch (err) {
                 setError('Error de conexión con el servidor.');
             } finally {
-                setCargando(false); 
+                setCargando(false);
             }
         };
 
-        pedirEntradas();
+        pedirRanking();
+    }, [categoriaElegida]); //Reejecuta si el usuario cambia de categoría
 
-    }, [categoriaActual]);
-
-    const tarjetasRenderizadas = entradas.map((entrada, index) => {
-        if (index >= 3 && (index - 3) % 20 === 0) { //Esto coloca un mensaje de publicidad cada 20 mensajes desde el 4
+    //Mapeamos las entradas para crear las tarjetas
+    const rankingRenderizado = entradas.map((entrada, index) => {
+        
+        //cada 20 mensajes a partir del 4º
+        if (index >= 3 && (index - 3) % 20 === 0) { 
             return (
                 <React.Fragment key={`grupo-${entrada.id}`}>
-
-                    <PrewipeCardPubli
+                    
+                    <PreWipeCardPubli
                         name="Coca-Cola" 
                         content="Disfruta del nuevo sabor de nuestra Coca-Cola sabor paella!" 
                         marca="cocacola" 
                         url="https://www.coca-cola.com/es/es"
                     />
-
-                    <PreWipeCard content={entrada.contenido}/>
+                    
+                    <RankCard 
+                        key={entrada.id}
+                        pos={index + 1} //El index empieza en 0 sumamos 1 para los puestos
+                        user={entrada.usuario.username}
+                        medallas={entrada.usuario.medallas}
+                        content={entrada.contenido}
+                        sumlikes={entrada.likes_count}
+                    />
 
                 </React.Fragment>
             );
         }
-        //si no toca, se entrega la entrada.
-        return <PreWipeCard key={entrada.id} id={entrada.id} content={entrada.contenido} />;
+        
+        console.log("Entrada:", entrada);
+        // Si no toca publicidad, mostramos la tarjeta normal
+        return (
+            <RankCard 
+                key={entrada.id}
+                pos={index + 1}
+                user={entrada.usuario.username}
+                medallas={entrada.usuario.medallas}
+                content={entrada.contenido}
+                sumlikes={entrada.likes_count}
+            />
+        );
     });
-    
 
     return (
         <React.Fragment>
             {cargando && <div className="cargando-logo"></div>}
 
-            {!cargando && entradas.length > 0 && (
-                <>
-                    {/*Imprimimos la lista de entradas (que ya lleva la publi camuflada en medio) */}
-                    {tarjetasRenderizadas}
+            {!cargando && error && <p className="mensaje-error">{error}</p>}
 
+            {!cargando && !error && entradas.length > 0 && (
+                <>
+                    {/* Imprimimos el ranking final */}
+                    {rankingRenderizado}
                 </>
             )}
 
-            {!cargando && entradas.length === 0 && (
+            {!cargando && !error && entradas.length === 0 && (
                 <p className="mensaje">
-                    Aún no hay publicaciones en {categoriaElegida}. ¡Anímate a publicar!
+                    Aún no hay suficientes datos para el ranking en {categoriaElegida}.
                 </p>
-            )}    
+            )}
+
         </React.Fragment>
     );
 }

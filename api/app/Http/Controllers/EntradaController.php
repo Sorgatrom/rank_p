@@ -7,6 +7,7 @@ use App\Models\Entrada;
 use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth; // <-- IMPORTANTE Para identificar al usuario del Like!
+use Illuminate\Support\Facades\DB;
 
 class EntradaController extends Controller
 {
@@ -81,19 +82,23 @@ public function filtrado(Request $request, $categoria) {
         return response()->json($datosFormateados);
     }
 
-    public function obtenerRank($categoria) {
-        //Buscamos por categoría
-        $entradas = Entrada::where('categoria', $categoria)
-            //Cargamos al autor, pero SOLO el id y el nombre por seguridad (como acordamos antes)
-            ->with('usuario:id,name') 
-            //Se Crea una columna virtual llamada 'likes_count' con el total de corazones
-            ->withCount('likes') 
-            //Ordenamos usando esa columna virtual de mayor a menor
-            ->orderBy('likes_count', 'desc') 
-            //En caso de empate de likes, ordenamos por fecha (premio al madrugador)
-            ->orderBy('created_at', 'desc') 
-            //Ponemos el límite de 50
-            ->take(50) //Para no hacer una lista infinita
+        //Con esto eliminamos el problema de N+1, me estaba dando 5s a veces de tiempo de respuesta, dejaba que php hiciera la operación, mejor en la BBDD
+        public function obtenerRank($categoria) {
+            $entradas = Entrada::where('categoria', $categoria)
+            //Cargamos al autor
+            ->with('usuario:id,username,medallas') 
+            
+            //En el mismo viaje, contamos los likes directamente en la BD
+            ->addSelect(['likes_count' => DB::table('likes')
+                ->selectRaw('count(*)')
+                ->whereColumn('entrada_id', 'entradas.id') // Unimos por el id de la entrada
+            ])
+            
+            //PostgreSQL se encarga de ordenar de mayor a menor instantáneamente
+            ->orderByDesc('likes_count') 
+            
+            //Cortamos a los 50 primeros antes de traerlos a PHP
+            ->take(100) 
             ->get();
 
         return response()->json($entradas);

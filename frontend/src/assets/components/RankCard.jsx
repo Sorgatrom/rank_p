@@ -1,27 +1,27 @@
 import './rankcard.css'
-import { useState, useEffect } from 'react'
 import RankProvisor from '../utils/RankProvisor';
+import MedallProvisor from '../utils/MedallProvisor';
 
 
 function RankCard({pos, user, medallas, content, sumlikes }) {
 
     return (
-        <React.Fragment>
+        <>
             <div className="">
                 <RankProvisor>{pos}</RankProvisor>
                 <div className="">
                     <div className="">
                         <h2 className="">{user}</h2>
-                        <div className="">{medallas}</div>
+                        <MedallProvisor medallas={medallas}></MedallProvisor>
                     </div>
                     <p >{content}</p>
                 </div>
                 <div className="">
-                    <p className="">{sumlikes}</p>
+                    <p className="">{sumlikes !== undefined ? sumlikes : 0}</p>
                     <div className=""></div>
                 </div>
             </div>
-        </React.Fragment>
+        </>
     );
 }
 

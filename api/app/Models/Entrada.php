@@ -24,8 +24,8 @@ class Entrada extends Model
 
     // Le decimos a la entrada que puede tener muchos likes
     public function likes() {
-    return $this->belongsToMany(User::class, 'likes', 'entrada_id', 'usuario_id')
-                ->withPivot('creado_en');
-}
+        // Asegúrate de que el primer parámetro sea la clase correcta de tu modelo de usuarios (User o Usuario)
+        return $this->belongsToMany(User::class, 'likes', 'entrada_id', 'usuario_id');
+    }
 
 }

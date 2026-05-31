@@ -27,6 +27,11 @@ class Usuario extends Authenticatable{
         'password'
     ];
 
+    // Le decimos a Laravel que la columna 'medallas' contiene un Array (JSON)
+    protected $casts = [
+        'medallas' => 'array'
+    ];
+
     //relación "uno a muchos" que permite acceder fácilmente a todas las publicaciones asociadas a un usuario mediante un simple atajo.
     //a esto nos referimos en las EntradasController
     public function entradas() {
