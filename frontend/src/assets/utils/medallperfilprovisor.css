@@ -1,0 +1,376 @@
+.medalla-div{
+    max-width: 500px;
+    width: 100%;
+    margin-top: 10px;
+    height: 150px;
+
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f3f3f3;
+}
+
+.nombre-cabecera{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.logo-medalla{
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    margin-right: 5px;
+    background-image: url("../resources/Iconos/Iconos\ categorias.svg");
+    scale: 1.2;
+    background-position: -150px -115px;
+}
+
+.nombre-cabecera > p{
+    margin: 0px;
+    color: gray;
+}
+
+.bloque-medallas{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap:6px;
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    padding: 7px;
+    padding-top: 0px;
+
+}
+
+.div-oro-s,
+.div-plata-s,
+.div-bronce-s{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+}
+
+.div-oro-s > p,
+.div-plata-s > p,
+.div-bronce-s >P{
+    font-weight: lighter;
+    font-style: oblique;
+    color: grey;
+    margin: 0px;
+    margin-right: 1px;
+}
+
+
+/* Entretenimiento */
+.icono-entretenimiento-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: 0px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-entretenimiento-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: 0px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-entretenimiento-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: 0px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Politica */
+.icono-politica-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -30px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-politica-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -30px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-politica-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -30px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Deportes */
+.icono-deportes-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -60px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-deportes-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -60px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-deportes-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -60px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Tecnologia */
+.icono-tecnologia-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -90px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-tecnologia-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -90px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-tecnologia-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -90px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Arte */
+.icono-arte-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -120px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-arte-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -120px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-arte-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -120px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Viajes */
+.icono-viajes-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -150px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-viajes-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -150px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-viajes-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -150px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Moda */
+.icono-moda-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -180px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-moda-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -180px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-moda-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -180px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* Ciencia */
+.icono-ciencia-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -210px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-ciencia-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -210px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-ciencia-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -210px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* musica */
+.icono-musica-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -240px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-musica-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -240px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-musica-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -240px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* economia */
+.icono-economia-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -270px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-economia-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -270px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-economia-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -270px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* salud */
+.icono-salud-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -330px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-salud-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -330px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-salud-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -330px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* gastronomia */
+.icono-gastronomia-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -360px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-gastronomia-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -360px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-gastronomia-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -360px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* videojuegos */
+.icono-videojuegos-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -390px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-videojuegos-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -390px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-videojuegos-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -390px -90px; /* Movemos el lienzo para enseñar el bronce */
+}
+
+/* cine */
+.icono-cine-oro {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -420px -30px; /* Ajusta los px para apuntar a la medalla de oro */
+}
+
+.icono-cine-plata {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -420px -60px; /* Movemos el lienzo para enseñar la plata */
+}
+
+.icono-cine-bronce {
+    width: 30px;
+    height: 30px;
+    background-image: url('../resources/Iconos/Iconos\ categorias.svg');
+    background-position: -420px -90px; /* Movemos el lienzo para enseñar el bronce */
+}

@@ -12,14 +12,14 @@ export function MedallProvisor({ medallas }) {
     const totalBronce = inventarioMedallas.filter(medalla => medalla.tipo === 'bronce').length;
 
     // Variables para controlar si hay o no medallas
-    let hayOro = "-n";
-    let hayPlata = "-n";
-    let hayBronce = "-n";
-    let noHay = "-s"; // Por defecto mostramos el contenedor
+    let hayOro = "-no";
+    let hayPlata = "-no";
+    let hayBronce = "-no";
+    let noHay = "-si"; // Por defecto mostramos el contenedor
     
-    if(totalOro > 0) { hayOro = "-s" } 
-    if(totalPlata > 0) { hayPlata = "-s" }
-    if(totalBronce > 0) { hayBronce = "-s" }
+    if(totalOro > 0) { hayOro = "-si" } 
+    if(totalPlata > 0) { hayPlata = "-si" }
+    if(totalBronce > 0) { hayBronce = "-si" }
     
     // 3. Lógica más limpia para ocultar el contenedor principal:
     // Si la suma de todas las medallas es 0, ocultamos el div entero

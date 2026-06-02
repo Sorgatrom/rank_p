@@ -1,4 +1,4 @@
-.div-medallas-s{
+.div-medallas-si{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,15 +14,15 @@
     width: fit-content;
 }
 
-.div-medallas-n{
+.div-medallas-no{
     display: none;
 }
 
-.div-oro-n{
+.div-oro-no{
     display: none;
 }
 
-.div-oro-s{
+.div-oro-si{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,7 +30,7 @@
 
 }
 
-.div-oro-s > p{
+.div-oro-si > p{
     font-weight: lighter;
     font-style: oblique;
     color: grey;
@@ -38,7 +38,7 @@
     margin-right: 3px;
 }
 
-.div-oro-s > div{
+.div-oro-si > div:nth-child(2){
     margin: 0px;
     width: 15px;
     height: 15px;
@@ -46,11 +46,11 @@
 
 }
 
-.div-plata-n{
+.div-plata-no{
     display: none;
 }
 
-.div-plata-s{
+.div-plata-si{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,7 +58,7 @@
 
 }
 
-.div-plata-s > p{
+.div-plata-si > p{
     font-weight: lighter;
     font-style: oblique;
     color: grey;
@@ -66,7 +66,7 @@
     margin-right: 3px;
 }
 
-.div-plata-s > div{
+.div-plata-si > div:nth-child(2){
     margin: 0px;
     width: 15px;
     height: 15px;
@@ -75,11 +75,11 @@
 
 }
 
-.div-bronce-n{
+.div-bronce-no{
     display: none;
 }
 
-.div-bronce-s{
+.div-bronce-si{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,7 +87,7 @@
 
 }
 
-.div-bronce-s > p{
+.div-bronce-si > p{
     font-weight: lighter;
     font-style: oblique;
     color: grey;
@@ -95,7 +95,7 @@
     margin-right: 3px;
 }
 
-.div-bronce-s > div{
+.div-bronce-si > div:nth-child(2){
     margin: 0px;
     width: 15px;
     height: 15px;

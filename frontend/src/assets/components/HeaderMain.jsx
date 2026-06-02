@@ -2,6 +2,7 @@ import './headerMain.css';
 import { useState, useEffect, useContext } from 'react';
 import { TimerFlag } from "../utils/TimerFlag.jsx"; // Tu banderita inteligente
 import { TokenContext } from '../utils/TokenProvisor.jsx';
+import { Link } from 'react-router-dom';
 
 function HeaderMain({}) {
     // Nos traemos la variable del TokenProvisor
@@ -21,8 +22,9 @@ function HeaderMain({}) {
                     
                     <p>{tokens}/1</p>
                     <div className="header-main-info-div2"></div>
-                    <div className="header-main-user">
-                    </div>
+                    <Link to="/perfil" className="boton-menu">
+                        <div className="header-main-user"></div>
+                    </Link>
                 </div>
             </div>
         </>

@@ -4,12 +4,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntradaController;
-use App\Http\Controllers\AuthController; // <-- Importamos el nuevo controlador paara la autentificación
+use App\Http\Controllers\AuthController; 
+use App\Http\Controllers\UserController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-
 
 //RUTA DE LOGIN
 Route::post('/login', [AuthController::class, 'login']);
@@ -17,9 +17,8 @@ Route::post('/login', [AuthController::class, 'login']);
 //Ruta de etradas para el usuario no regristado
 Route::get('/publico/entradas/{categoria}', [EntradaController::class, 'prewipeInvitados']);
 
-
 //Protegemos las rutas para que solo los usuarios logueados puedan acceder
-Route::middleware('auth:sanctum')->group(function () { //Importantisimo.
+Route::middleware('auth:sanctum')->group(function () { 
     
     //Ruta para publicar una nueva entrada
     Route::post('/entradas', [EntradaController::class, 'store']);
@@ -35,5 +34,8 @@ Route::middleware('auth:sanctum')->group(function () { //Importantisimo.
 
     //LIKES
     Route::post('/entradas/{id}/like', [EntradaController::class, 'toggleLike']);
+
+    //PERFIL
+    Route::put('/user/perfil', [UserController::class, 'actualizarPerfil']);
     
 });
