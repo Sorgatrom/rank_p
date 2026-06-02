@@ -11,7 +11,7 @@ body{
   margin-right: 5vw;
   margin-top: 2vh;
   margin-bottom:2vh;
-  background-color: #f3f3f3;
+  background: linear-gradient(#f3f3f3, #ffff);
   
   /* Estoq quitar, solo sirve para visualizar el contenedor
   border-style: solid;
