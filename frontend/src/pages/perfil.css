@@ -11,7 +11,7 @@
 .loader{
     height: 30px;
     width: 30px;
-    background-image: url("../assets/resources/Iconos/logo_carga.gif");
+    background-image: url("@/assets/assets/resources/Iconos/logo_carga.gif");
 
     /* -- LA ANIMACIÓN DEL METRÓNOMO -- */
     transform-origin: center; 
@@ -46,7 +46,7 @@
 .logo-loggout{
     height: 29px;
     width: 29px;
-    background-image: url('../assets/resources/Iconos/Iconos\ categorias.svg');
+    background-image: url('@/assets/assets/resources/Iconos/Iconos\ categorias.svg');
     background-position: -0px -120px;
 }
 
@@ -69,7 +69,7 @@
 .logo-dashboard{
     height: 30px;
     width: 30px;
-    background-image: url('../assets/resources/Iconos/Iconos\ categorias.svg');
+    background-image: url('@/assets/assets/resources/Iconos/Iconos\ categorias.svg');
     background-position: -90px -120px;
     margin-right: 5px;
 }
@@ -89,7 +89,7 @@
         
 
         .logo-loggout{
-            background-image: url('../assets/resources/Iconos/Iconos\ categorias.svg');
+            background-image: url('@/assets/assets/resources/Iconos/Iconos\ categorias.svg');
             background-position: -30px -120px;
             filter: grayscale(0%);
         }
@@ -154,7 +154,7 @@
     height: 30px;
     margin: 0px;
     margin-right: 5px;
-    background-image: url('../assets/resources/Iconos/Iconos\ categorias.svg');
+    background-image: url('@/assets/assets/resources/Iconos/Iconos\ categorias.svg');
     background-position: -300px 0px;
 }
 
@@ -212,7 +212,7 @@
     height: 30px;
     margin: 0px;
     margin-right: 5px;
-    background-image: url('../assets/resources/Iconos/Iconos\ categorias.svg');
+    background-image: url('@/assets/assets/resources/Iconos/Iconos\ categorias.svg');
     background-position: -120px -120px;
 }
 

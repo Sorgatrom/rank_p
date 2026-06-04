@@ -4,7 +4,7 @@
     width: 30px;
     background-color: #f3f3f3; 
     margin: 20px auto;
-    background-image: url("../resources/iconos/logo_carga.gif");
+    background-image: url("@/assets/resources/iconos/logo_carga.gif");
 
 
 

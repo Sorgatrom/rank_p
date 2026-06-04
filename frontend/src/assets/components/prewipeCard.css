@@ -51,7 +51,7 @@
     height: 30px;
     width: 30px;
     margin-left: 15px;
-    background-image: url('../resources/iconos/Iconos categorias.svg');
+    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
     background-position: -330px 0px;
 
     /*para que en accesibilidad el texto del botón no se muestre, pero que siga siendo accesible para lectores de pantalla*/
@@ -72,7 +72,7 @@
     height: 30px;
     width: 30px;
     margin-left: 15px;
-    background-image: url('../resources/iconos/Iconos categorias.svg');
+    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
     background-position: -330px 0px;
 
     /*para que en accesibilidad el texto del botón no se muestre, pero que siga siendo accesible para lectores de pantalla*/
