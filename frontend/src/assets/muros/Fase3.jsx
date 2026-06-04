@@ -2,7 +2,7 @@ import './fase3.css'
 import React, { useState, useEffect, useContext } from 'react';
 import { CategoriaContext } from '@/assets/utils/CategoriasProvisor'
 import RankCard from '@/assets/components/RankCard';
-import PreWipeCardPubli from '@/assets/components/PrewipeCardPubli';
+import PreWipeCardPubli from '@/assets/components/PreWipeCardPubli';
 
 
 function Fase3() {
