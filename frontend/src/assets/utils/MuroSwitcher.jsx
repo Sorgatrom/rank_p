@@ -1,6 +1,6 @@
 //Este componente será el encargado de cambiar entre fases y pintarlas; estas fases las hemos diseñado en "muros"
 import React from 'react';
-import {useTimer} from '../utils/TimerProvisor.jsx';
+import {useTimer} from '@/assets/utils/TimerProvisor.jsx';
 
 import './muroswitcher.css';
 

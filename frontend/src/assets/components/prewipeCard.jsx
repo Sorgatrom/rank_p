@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './prewipeCard.css'
-import { generateFakeName } from "../utils/generador_nombres"
+import { generateFakeName } from "@/assets/utils/generador_nombres"
 
 
 // Las props que recibe el componente debe de llevar id.

@@ -1,7 +1,7 @@
 import './perfil.css'
 import React, { useState, useEffect } from 'react';
 import Headerinv from '../assets/components/Headerinv.jsx'
-import MedallaPerfilProvisor from '../assets/utils/medallperfilProvisor.jsx';
+import MedallaPerfilProvisor from '../assets/utils/MedallPerfilProvisor.jsx';
 import { useNavigate } from 'react-router-dom';
 
 function Perfil() {

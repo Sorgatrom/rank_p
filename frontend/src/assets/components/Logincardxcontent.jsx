@@ -1,6 +1,6 @@
 import './prewipeCard.css'
 import { useState } from 'react'
-import { generateFakeName } from "../utils/generador_nombres"
+import { generateFakeName } from "@/assets/utils/generador_nombres"
 
 function Logincardxcontent({content}) {
 

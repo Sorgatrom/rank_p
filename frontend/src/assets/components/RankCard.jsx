@@ -1,6 +1,6 @@
 import './rankcard.css'
-import RankProvisor from '../utils/RankProvisor';
-import MedallProvisor from '../utils/MedallProvisor';
+import RankProvisor from '@/assets/utils/RankProvisor';
+import MedallProvisor from '@/assets/utils/MedallProvisor';
 
 
 function RankCard({pos, user, medallas, content, sumlikes }) {

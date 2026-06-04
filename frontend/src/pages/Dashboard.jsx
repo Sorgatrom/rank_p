@@ -1,15 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import PreWipeCard from '../assets/components/prewipeCard'
-import PreWipeCardPubli from '../assets/components/PrewipeCardPubli'
-import HeaderMain from '../assets/components/HeaderMain'
-import CatBar from '../assets/components/barra_categorias/CatBar'
-import { TokenProvisor } from '../assets/utils/TokenProvisor';
-import {CategoriaProvisor} from '../assets/utils/CategoriasProvisor' //La emisora de radio!
-import PostCard from '../assets/components/PostCard'
-import { TimerProvisor } from '../assets/utils/TimerProvisor';
-import { MuroSwitcher } from '../assets/utils/MuroSwitcher';
+import PreWipeCard from '@/assets/components/PreWipeCard'
+import PreWipeCardPubli from '@/assets/components/PrewipeCardPubli'
+import HeaderMain from '@/assets/components/HeaderMain'
+import CatBar from '@/assets/components/barra_categorias/CatBar'
+import { TokenProvisor } from '@/assets/utils/TokenProvisor';
+import {CategoriaProvisor} from '@/assets/utils/CategoriasProvisor' //La emisora de radio!
+import PostCard from '@/assets/components/PostCard'
+import { TimerProvisor } from '@/assets/utils/TimerProvisor';
+import { MuroSwitcher } from '@/assets/utils/MuroSwitcher';
 
 
 function Dashboard() {

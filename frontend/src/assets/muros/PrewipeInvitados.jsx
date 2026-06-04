@@ -1,9 +1,9 @@
 import './prewipeinvitados.css'
 import React, { useState, useEffect, useContext } from 'react';
-import { CategoriaContext } from '../utils/CategoriasProvisor'
-import PrewipeCardPubli from '../components/PrewipeCardPubli'
-import Logincardxcontent from '../components/Logincardxcontent'
-import Logincardx from '../components/Logincardx'
+import { CategoriaContext } from '@/assets/utils/CategoriasProvisor'
+import PrewipeCardPubli from '@/assets/components/PrewipeCardPubli'
+import Logincardxcontent from '@/assets/components/Logincardxcontent'
+import Logincardx from '@/assets/components/Logincardx'
 
 function PrewipeInvitado() {
     //La RADIO! Sintonizamos la categoría!

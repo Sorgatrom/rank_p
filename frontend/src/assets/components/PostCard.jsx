@@ -1,9 +1,9 @@
 import './postcard.css'
 import { useContext, useState } from 'react';
-import { CategoriaContext } from '../utils/CategoriasProvisor';
-import { TokenContext } from '../utils/TokenProvisor';
+import { CategoriaContext } from '@/assets/utils/CategoriasProvisor';
+import { TokenContext } from '@/assets/utils/TokenProvisor';
 
-import { useTimer } from '../utils/TimerProvisor'; //Importamos el reloj
+import { useTimer } from '@/assets/utils/TimerProvisor'; //Importamos el reloj
 
 function PostCard({}) {
     const { categoriaElegida } = useContext(CategoriaContext);
