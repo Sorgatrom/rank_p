@@ -30,7 +30,7 @@
     transition: all 0.3s ease;
     border-style: solid;
     border-width: 2px;
-    border-color: #227da1;
+    border-color: orangered;
     filter: grayscale(0%);
 }
 
