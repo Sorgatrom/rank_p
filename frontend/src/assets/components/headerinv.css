@@ -15,7 +15,7 @@
     margin:0px;
     margin-left: 5px;
     margin-right: 5px;
-    background-image: url('@/assets/resources/Iconos/logo ppal svg.svg');
+    background-image: url('/Iconos/logo ppal svg.svg');
     min-width: 40px;
 }
 
@@ -154,7 +154,7 @@
     scale: 0.8;
     height: 30px;
     width: 30px;
-    background-image: url("@/assets/resources/iconos/logo_carga.gif");
+    background-image: url('/Iconos//logo_carga.gif');
 
     /* -- LA ANIMACIÓN DEL METRÓNOMO -- */
     transform-origin: center; 

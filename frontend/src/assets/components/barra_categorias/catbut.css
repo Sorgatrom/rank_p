@@ -39,21 +39,21 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
 }
 
 .categoria-button-Entretenimiento.activo{
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
 }
 
 .categoria-button-Política{
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -30px 0px;
 }
 
@@ -61,7 +61,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -60px 0px;
 }
 
@@ -69,7 +69,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -90px 1px;
 }
 
@@ -77,7 +77,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -120px 1px;
 }
 
@@ -85,7 +85,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -150px 0px;
 }
 
@@ -93,7 +93,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -180px 0px;
 }
 
@@ -101,7 +101,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -210px 0px;
 }
 
@@ -109,7 +109,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -240px 1px;
 }
 
@@ -117,7 +117,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -270px 1px;
 }
 
@@ -125,7 +125,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -360px 1px;
 }
 
@@ -133,7 +133,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -390px -1px;
 }
 
@@ -141,7 +141,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -420px 0px;
 }
 
@@ -149,7 +149,7 @@
     height: 30px;
     width: 30px;
     padding-right: 3px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: 30px 0px
 }
 

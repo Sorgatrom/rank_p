@@ -28,7 +28,7 @@
     padding-right: 10px;
     width: 30px;
     border-radius: 25px;
-    background-image: url(@/assets/resources/Iconos/Iconos\ categorias.svg);
+    background-image: url('/Iconos/Iconos\ categorias.svg');
     justify-content: center;
     align-items: center;
     background-position: -205px 30px;
@@ -43,7 +43,7 @@
     padding-right: 10px;
     width: 30px;
     border-radius: 25px;
-    background-image: url(@/assets/resources/Iconos/Iconos\ categorias.svg);
+    background-image: url('/Iconos/Iconos\ categorias.svg');
     justify-content: center;
     align-items: center;
     background-position: -258px 30px;

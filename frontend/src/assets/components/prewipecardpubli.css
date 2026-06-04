@@ -55,7 +55,7 @@
     height: 15px;
     width: 45px;
     margin: 0;
-    background-image: url('@/assets/resources/iconos/Iconos Ranks.svg');
+    background-image: url('/Iconos/Iconos Ranks.svg');
     background-position: -45px 0px;
     margin-left: 5px;
 }
@@ -63,7 +63,7 @@
 .prewipe-card-publi-icon{
     height: 30px;
     width: 30px;
-    background-image: url('@/assets/resources/iconos/Iconos categorias.svg');
+    background-image: url('/Iconos/Iconos categorias.svg');
     background-position: -335px -30px;
     margin-left: 15px;
     margin-right: 15px;

@@ -42,7 +42,7 @@
     margin: 0px;
     width: 15px;
     height: 15px;
-    background-image: url('@/assets/resources/Iconos/Iconos\ Ranks.svg');
+    background-image: url('/Iconos/Iconos\ Ranks.svg');
 
 }
 
@@ -70,7 +70,7 @@
     margin: 0px;
     width: 15px;
     height: 15px;
-    background-image: url('@/assets/resources/Iconos/Iconos\ Ranks.svg');
+    background-image: url('/Iconos/Iconos\ Ranks.svg');
     background-position: -15px 0px;
 
 }
@@ -99,7 +99,7 @@
     margin: 0px;
     width: 15px;
     height: 15px;
-    background-image: url('@/assets/resources/Iconos/Iconos\ Ranks.svg');
+    background-image: url('/Iconos/Iconos\ Ranks.svg');
     background-position: -30px 0px;
 
 }
