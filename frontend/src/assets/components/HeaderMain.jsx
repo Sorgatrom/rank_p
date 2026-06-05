@@ -1,6 +1,6 @@
 import './headerMain.css';
 import { useState, useEffect, useContext } from 'react';
-import { TimerFlag } from "@/assets/utils/TimerFlag.jsx"; // Tu banderita inteligente
+import { TimerFlag } from "@/assets/utils/timerFlag.jsx"; // Tu banderita inteligente
 import { TokenContext } from '@/assets/utils/TokenProvisor.jsx';
 import { Link } from 'react-router-dom';
 
