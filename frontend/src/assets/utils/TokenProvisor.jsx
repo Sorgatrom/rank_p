@@ -15,7 +15,7 @@ export function TokenProvisor({children}) {
             if (!token) return; //Si no hay token en el localStorage, no hacemos nada
 
             try {
-                const respuesta = await fetch('http://127.0.0.1:8000/api/user', {
+                const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/user`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'

@@ -21,7 +21,7 @@ function Fase3() {
                 setCargando(true);
                 const token = localStorage.getItem('token');
                 
-                const respuesta = await fetch(`http://127.0.0.1:8000/api/entradas/${categoriaElegida}/rank`, {
+                const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/entradas/${categoriaElegida}/rank`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

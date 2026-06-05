@@ -24,7 +24,7 @@ function Fase1() { // 2. Dejamos los paréntesis vacíos
                 const token = localStorage.getItem('token');
 
                 // 4. Usamos categoriaElegida en la URL
-                const respuesta = await fetch(`http://127.0.0.1:8000/api/entradas/${categoriaElegida}/prewipe`, {
+                const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/entradas/${categoriaElegida}/prewipe`, {
                     method: 'GET', 
                     headers: {
                         'Content-Type': 'application/json',

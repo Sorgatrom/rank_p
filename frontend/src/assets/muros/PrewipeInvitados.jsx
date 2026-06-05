@@ -20,7 +20,7 @@ function PrewipeInvitado() {
             setCargando(true);
             try {
                 //Petición a ruta pública sin token!!! como invitado.
-                const respuesta = await fetch(`http://127.0.0.1:8000/api/publico/entradas/${categoriaElegida}`);
+                const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/publico/entradas/${categoriaElegida}`);
 
                 if (respuesta.ok) {
                     const datos = await respuesta.json();

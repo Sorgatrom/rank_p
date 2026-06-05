@@ -31,7 +31,7 @@ function PreWipeCard({id, content, yaLeDiLike}) {
             // Recuperamos el token del usuario logueado
             const token = localStorage.getItem('token');
 
-            const respuesta = await fetch(`http://127.0.0.1:8000/api/entradas/${id}/like`, {
+            const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/entradas/${id}/like`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

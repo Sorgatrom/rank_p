@@ -24,7 +24,7 @@ function Fase2() { // Quitamos CategoriaContext de los paréntesis
                 const token = localStorage.getItem('token');
 
                 // Usamos categoriaElegida en la petición al backend
-                const respuesta = await fetch(`http://127.0.0.1:8000/api/entradas/${categoriaElegida}/filtrado`, {
+                const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/entradas/${categoriaElegida}/filtrado`, {
                     method: 'GET', 
                     headers: {
                         'Content-Type': 'application/json',

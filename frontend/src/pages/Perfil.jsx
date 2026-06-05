@@ -22,7 +22,7 @@ function Perfil() {
             try {
                 const token = localStorage.getItem('token');
                 
-                const respuesta = await fetch('http://127.0.0.1:8000/api/user', {
+                const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/user`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function Perfil() {
     const enviarActualizacionAlBackend = async (datosAEnviar) => {
         const token = localStorage.getItem('token');
         try {
-            const respuesta = await fetch('http://127.0.0.1:8000/api/user/perfil', {
+            const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/user/perfil`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

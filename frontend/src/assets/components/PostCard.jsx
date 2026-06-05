@@ -62,7 +62,7 @@ function PostCard({}) {
         const token = localStorage.getItem('token');
 
         try {
-            const respuesta = await fetch('http://127.0.0.1:8000/api/entradas', {
+            const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/api/entradas`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
