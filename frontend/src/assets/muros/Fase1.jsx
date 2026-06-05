@@ -1,7 +1,7 @@
 import './fase1.css';
 import React, { useState, useEffect, useContext } from 'react'; // 1. Añadimos useContext aquí
 import { CategoriaContext } from '@/assets/utils/CategoriasProvisor';
-import PreWipeCard from '@/assets/components/PreWipeCard';
+import PreWipeCard from '@/assets/components/prewipeCard';
 import PreWipeCardPubli from '@/assets/components/PrewipeCardPubli';
 
 function Fase1() { // 2. Dejamos los paréntesis vacíos
